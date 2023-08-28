@@ -1,0 +1,29 @@
+#!/bin/bash
+
+# Open VS Code
+code .
+
+echo "$(tput setaf 2)Pulling latest updates from the repository...$(tput sgr0)";
+# get lateste update from repository
+git add .
+git commit -m '.'
+git pull origin main
+
+# Check for updates
+echo "$(tput setaf 2)Checking for latest updates...$(tput sgr0)";
+output=$(npx ncu -u  --color)
+
+# Print the command output
+echo "$output"
+
+# If the output co `:)` then run installation
+if [[ $output != *latest* ]] # * is used for pattern matching
+then
+    # Deleting the yarn.lock will fix the eslint error when starting the project 
+    unlink yarn.lock;
+    # Install new updates
+    yarn install  
+fi
+
+# Start the project
+yarn start;

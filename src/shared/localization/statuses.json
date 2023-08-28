@@ -1,0 +1,98 @@
+{
+    "notStarted": {
+        "en": "Not Started",
+        "ar": "لم يتم البدء"
+    },
+    "inProgress": {
+        "en": "In Progress",
+        "ar": "قيد التنفيذ"
+    },
+    "completed": {
+        "en": "Completed",
+        "ar": "اكتمل"
+    },
+    "cancelled": {
+        "en": "Cancelled",
+        "ar": "ألغيت"
+    },
+    "canceled": {
+        "en": "Canceled",
+        "ar": "ألغيت"
+    },
+    "pending": {
+        "en": "Pending",
+        "ar": "قيد الانتظار"
+    },
+    "pendingApproval": {
+        "en": "Pending Approval",
+        "ar": "قيد الموافقة"
+    },
+    "approved": {
+        "en": "Approved",
+        "ar": "تمت الموافقة"
+    },
+    "rejected": {
+        "en": "Rejected",
+        "ar": "تم الرفض"
+    },
+    "rejectedByManager": {
+        "en": "Rejected By Manager",
+        "ar": "تم الرفض من قبل المدير"
+    },
+    "rejectedByAdmin": {
+        "en": "Rejected By Admin",
+        "ar": "تم الرفض من قبل المدير"
+    },
+    "rejectedByUser": {
+        "en": "Rejected By User",
+        "ar": "تم الرفض من قبل المستخدم"
+    },
+    "rejectedBySystem": {
+        "en": "Rejected By System",
+        "ar": "تم الرفض من قبل النظام"
+    },
+    "onTheWay": {
+        "en": "On The Way",
+        "ar": "في الطريق"
+    },
+    "shipped": {
+        "en": "Shipped",
+        "ar": "تم الشحن"
+    },
+    "delivered": {
+        "en": "Delivered",
+        "ar": "تم التسليم"
+    },
+    "returned": {
+        "en": "Returned",
+        "ar": "مرتجع"
+    },
+    "active": {
+        "en": "Active",
+        "ar": "نشط"
+    },
+    "inactive": {
+        "en": "Inactive",
+        "ar": "غير نشط"
+    },
+    "deleted": {
+        "en": "Deleted",
+        "ar": "محذوف"
+    },
+    "draft": {
+        "en": "Draft",
+        "ar": "مسودة"
+    },
+    "paused": {
+        "en": "Paused",
+        "ar": "متوقف مؤقتا"
+    },
+    "suspended": {
+        "en": "Suspended",
+        "ar": "معلق"
+    },
+    "stopped": {
+        "en": "Stopped",
+        "ar": "متوقف"
+    }
+}

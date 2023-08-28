@@ -1,0 +1,2694 @@
+{
+  "test": {
+    "en": "Test",
+    "ar": "التجربة"
+  },
+  "project": {
+    "en": "Project",
+    "ar": "مشروع"
+  },
+  "male": {
+    "en": "Male",
+    "ar": "ذكر"
+  },
+  "female": {
+    "en": "Female",
+    "ar": "أنثى"
+  },
+  "all": {
+    "en": "All",
+    "ar": "الكل"
+  },
+  "metadata": {
+    "en": "Metadata",
+    "ar": "بيانات التعريف"
+  },
+  "seoData": {
+    "en": "SEO Data",
+    "ar": "بيانات SEO"
+  },
+  "purchaseOrder": {
+    "en": "Purchase Order",
+    "ar": "طلب شراء"
+  },
+  "properties": {
+    "en": "Properties",
+    "ar": "العقارات"
+  },
+  "ref": {
+    "en": "Ref",
+    "ar": "المرجع"
+  },
+  "refID": {
+    "en": "Ref ID",
+    "ar": "الرقم المرجعي"
+  },
+  "owner": {
+    "en": "Owner",
+    "ar": "المالك"
+  },
+  "owners": {
+    "en": "Owners",
+    "ar": "الملآك"
+  },
+  "amenities": {
+    "en": "Amenities",
+    "ar": "وسائل الراحة"
+  },
+  "propertyTypes": {
+    "en": "Property Types",
+    "ar": "انواع العقارات"
+  },
+  "compound": {
+    "en": "Compound",
+    "ar": "مُجمع"
+  },
+  "doormanName": {
+    "en": "Doorman Name",
+    "ar": "إسم البواب"
+  },
+  "doormanMobile": {
+    "en": "Doorman Mobile",
+    "ar": "رقم البواب"
+  },
+  "propertyViews": {
+    "en": "Property Views",
+    "ar": "عرض العقارات"
+  },
+  "totalProperties": {
+    "en": "Total Properties",
+    "ar": "إجمالي العقارات"
+  },
+  "posts": {
+    "en": "Posts",
+    "ar": "المشاركات"
+  },
+  "blog": {
+    "en": "Blog",
+    "ar": "المقالات"
+  },
+  "event": {
+    "en": "Event",
+    "ar": "الحدث"
+  },
+  "currentPrice": {
+    "en": "Current Price",
+    "ar": "السعر الحالي"
+  },
+  "pricePerUnit": {
+    "en": "Price Per Unit",
+    "ar": "سعر الوحدة"
+  },
+  "unitPrice": {
+    "en": "Unit Price",
+    "ar": "سعر الوحدة"
+  },
+  "originalPrice": {
+    "en": "Original Price",
+    "ar": "السعر الأصلي"
+  },
+  "totalPrice": {
+    "en": "Total Price",
+    "ar": "السعر الاجمالي"
+  },
+  "currentPricePerUnit": {
+    "en": "Current Price Per Unit",
+    "ar": "السعر الحالي للوحدة"
+  },
+  "alternativePhoneNumber": {
+    "en": "Alternative Phone Number",
+    "ar": "رقم هاتف بديل"
+  },
+  "priceTaxIncluded": {
+    "en": "Price Tax Included",
+    "ar": "السعر شامل الضريبة"
+  },
+  "dashboard": {
+    "en": "Dashboard",
+    "ar": "لوحة التحكم"
+  },
+  "totalQuantity": {
+    "en": "Total Quantity",
+    "ar": "الكمية الإجمالية"
+  },
+  "stock": {
+    "en": "Stock",
+    "ar": "المخزون"
+  },
+  "stockItem": {
+    "en": "Stock Item",
+    "ar": "عنصر مخزون"
+  },
+  "increment": {
+    "en": "Increment",
+    "ar": "زيادة"
+  },
+  "decrement": {
+    "en": "Decrement",
+    "ar": "تخفيض"
+  },
+  "orderDate": {
+    "en": "Order Date",
+    "ar": "تاريخ الطلب"
+  },
+  "salesOrders": {
+    "en": "Sales Orders",
+    "ar": "طلبات المبيعات"
+  },
+  "purchasesOrders": {
+    "en": "Purchases Orders",
+    "ar": "طلبات الشراء"
+  },
+  "manufacturingCountry": {
+    "en": "Manufacturing Country",
+    "ar": "بلد التصنيع"
+  },
+  "item": {
+    "en": "Item",
+    "ar": "الصنف"
+  },
+  "totalPurchasesOrders": {
+    "en": "Total Purchases Orders",
+    "ar": "عدد مرات الشراء"
+  },
+  "totalSalesOrders": {
+    "en": "Total Sales Orders",
+    "ar": "عدد مرات البيع"
+  },
+  "saleOrder": {
+    "en": "Sale Order",
+    "ar": "عملية بيع"
+  },
+  "expenseType": {
+    "en": "Expense Type",
+    "ar": "نوع المصروف"
+  },
+  "expensesTypes": {
+    "en": "Expenses Types",
+    "ar": "أنواع المصروفات"
+  },
+  "expenses": {
+    "en": "Expenses",
+    "ar": "المصروفات"
+  },
+  "expense": {
+    "en": "Expense",
+    "ar": "مصروف"
+  },
+  "purchaseId": {
+    "en": "Purchase Id",
+    "ar": "رقم الشراء"
+  },
+  "cost": {
+    "en": "Cost",
+    "ar": "التكلفة"
+  },
+  "adding": {
+    "en": "Adding",
+    "ar": "إضافة"
+  },
+  "taxDiscount": {
+    "en": "Tax Discount",
+    "ar": "خصم ضريبي"
+  },
+  "taxDiscountPercentage": {
+    "en": "Tax Discount Percentage",
+    "ar": "نسبة الخصم الضريبي"
+  },
+  "add": {
+    "en": "Add",
+    "ar": "إضافة"
+  },
+  "taxPercentage": {
+    "en": "Tax Percentage",
+    "ar": "نسبة الضريبة"
+  },
+  "tax": {
+    "en": "Tax",
+    "ar": "الضريبة"
+  },
+  "phoneNumber": {
+    "en": "Phone Number",
+    "ar": "رقم الهاتف"
+  },
+  "vendors": {
+    "en": "Vendors",
+    "ar": "الموردين"
+  },
+  "vendor": {
+    "en": "Vendor",
+    "ar": "المورد"
+  },
+  "initialStock": {
+    "en": "Initial Stock",
+    "ar": "الكمية الأولية"
+  },
+  "initialQuantity": {
+    "en": "Initial Quantity",
+    "ar": "الكمية الأولية"
+  },
+  "purchases": {
+    "en": "Purchases",
+    "ar": "المشتريات"
+  },
+  "initialQuantityPrice": {
+    "en": "Initial Quantity Price",
+    "ar": "سعر الكمية الأولية"
+  },
+  "selectMinLength": {
+    "en": "Please select at least %s items",
+    "ar": "يرجى تحديد %s عنصر على الأقل"
+  },
+  "corporateTypes": {
+    "en": "Corporate Types",
+    "ar": "أنواع الشركات"
+  },
+  "corporateType": {
+    "en": "Corporate Type",
+    "ar": "نوع الشركة"
+  },
+  "selectMaxLength": {
+    "en": "Please select at most %s items",
+    "ar": "يرجى تحديد %s عنصر على الأقصى"
+  },
+  "selectLength": {
+    "en": "Please select %s items",
+    "ar": "يرجى تحديد %s عناصر"
+  },
+  "phone": {
+    "en": "Phone",
+    "ar": "الهاتف"
+  },
+  "yes": {
+    "en": "Yes",
+    "ar": "نعم"
+  },
+  "view": {
+    "en": "View",
+    "ar": "عرض"
+  },
+  "welcomeBack": {
+    "en": "Welcome Back !",
+    "ar": "مرحبا بعودتك !"
+  },
+  "signIn": {
+    "en": "Sign In",
+    "ar": "تسجيل الدخول"
+  },
+  "signUp": {
+    "en": "Sign Up",
+    "ar": "تسجيل"
+  },
+  "forgotPasswordSuccess": {
+    "en": "We have sent you an email with a code to reset your password.",
+    "ar": "لقد أرسلنا بريدك الإلكتروني مع كود لإعادة تعيين كلمة المرور الخاصة بك."
+  },
+  "enterResetPasswordDigits": {
+    "en": "Please enter the digits you received in your email.",
+    "ar": "يرجى إدخال الأرقام التي تلقيتها في البريد الإلكتروني الخاص بك."
+  },
+  "verifyEmail": {
+    "en": "Verify Email",
+    "ar": "تحقق من البريد الإلكتروني"
+  },
+  "verifyCode": {
+    "en": "Verify Code",
+    "ar": "تحقق من الكود"
+  },
+  "verificationCodeSuccess": {
+    "en": "Code is verified successfully.",
+    "ar": "تم التحقق من الكود بنجاح."
+  },
+  "newPassword": {
+    "en": "New Password",
+    "ar": "كلمة المرور الجديدة"
+  },
+  "passwordConfirmation": {
+    "en": "Password Confirmation",
+    "ar": "تأكيد كلمة المرور"
+  },
+  "representativeName": {
+    "en": "Representative Name",
+    "ar": "اسم ممثل الشركة"
+  },
+  "remainingPayments": {
+    "en": "Remaining Payments",
+    "ar": "المدفوعات المتبقية"
+  },
+  "resetPasswordSuccess": {
+    "en": "Your Password has been reset successfully, you can now login with your new password.",
+    "ar": "تم إعادة تعيين كلمة المرور بنجاح، يمكنك الآن تسجيل الدخول بكلمة المرور الجديدة."
+  },
+  "system": {
+    "en": "System",
+    "ar": "النظام"
+  },
+  "by": {
+    "en": "By",
+    "ar": "بواسطة"
+  },
+  "viewSettingsList": {
+    "en": "View Settings List",
+    "ar": "عرض قائمة الإعدادات"
+  },
+  "viewSettings": {
+    "en": "View Settings",
+    "ar": "عرض الإعدادات"
+  },
+  "updateSettings": {
+    "en": "Update Settings",
+    "ar": "تحديث الإعدادات"
+  },
+  "orderStatusLog": {
+    "en": "Status Log",
+    "ar": "سجل تغيير حالة الطلب"
+  },
+  "changeStatusTo": {
+    "en": "Change Status To:",
+    "ar": "تغيير حالة الطلب إلى"
+  },
+  "changeOrderStatus": {
+    "en": "Change Order Status",
+    "ar": "تغيير حالة الطلب"
+  },
+  "changeOrderStatusMessage": {
+    "en": "Are you sure you want to change the status of this order?",
+    "ar": "هل أنت متأكد من تغيير حالة هذا الطلب؟"
+  },
+  "enterOrderNotes": {
+    "en": "If you have any notes, please enter them here.",
+    "ar": "إذا كان لديك أي ملاحظات، يرجى إدخالها هنا."
+  },
+  "orderStatusChangedSuccessfully": {
+    "en": "Order status has been changed successfully.",
+    "ar": "تم تغيير حالة الطلب بنجاح."
+  },
+  "cancelOrder": {
+    "en": "Cancel Order",
+    "ar": "إلغاء الطلب"
+  },
+  "resetPasswordEasily": {
+    "en": "Reset your password easily",
+    "ar": "إعادة تعيين كلمة المرور الخاصة بك بسهولة"
+  },
+  "sendResetCode": {
+    "en": "Send Reset Code",
+    "ar": "إرسال كود إعادة تعيين كلمة المرور"
+  },
+  "waitIRememberMyPassword": {
+    "en": "Wait, I remember my password...",
+    "ar": "انتظر، أنا أتذكر كلمة المرور..."
+  },
+  "clickHere": {
+    "en": "Click here",
+    "ar": "اضغط هنا"
+  },
+  "enterYourResetEmail": {
+    "en": "Enter your email and reset code will be sent to you!",
+    "ar": "أدخل بريدك الإلكتروني وسيتم إرسال كود الإعادة إليك!"
+  },
+  "signInToContinue": {
+    "en": "Sign in to continue to",
+    "ar": "تسجيل الدخول للمتابعة"
+  },
+  "welcomeUser": {
+    "en": "Welcome, %s",
+    "ar": "مرحباً, %s"
+  },
+  "loading": {
+    "en": "Loading...",
+    "ar": "جار التحميل..."
+  },
+  "noOptions": {
+    "en": "No options available",
+    "ar": "لا تتوفر أي خيارات"
+  },
+  "poweredBy": {
+    "en": "Powered by",
+    "ar": "مدعوم من"
+  },
+  "profileImage": {
+    "en": "Profile Image",
+    "ar": "صورة الملف الشخصي"
+  },
+  "cancelUpload": {
+    "en": "Cancel Upload",
+    "ar": "إلغاء الرفع"
+  },
+  "uploadCanceled": {
+    "en": "Upload Canceled Successfully",
+    "ar": "تم إلغاء الرفع بنجاح"
+  },
+  "uploadedSuccess": {
+    "en": "Uploaded Successfully",
+    "ar": "تم الرفع بنجاح"
+  },
+  "home": {
+    "en": "Home",
+    "ar": "الرئيسية"
+  },
+  "selectAll": {
+    "en": "Select All",
+    "ar": "تحديد الكل"
+  },
+  "appName": {
+    "en": "Matjar | Rowaad",
+    "ar": "متجر | رواد"
+  },
+  "profile": {
+    "en": "Profile",
+    "ar": "الملف الشخصي"
+  },
+  "editProfile": {
+    "en": "Edit Profile",
+    "ar": "تعديل الملف الشخصي"
+  },
+  "profileUpdatedSuccessfully": {
+    "en": "Your Profile Has Been Updated Successfully",
+    "ar": "تم تحديث ملفك الشخصي بنجاح"
+  },
+  "changePassword": {
+    "en": "Change Password",
+    "ar": "تغيير كلمة المرور"
+  },
+  "currentPassword": {
+    "en": "Current Password",
+    "ar": "كلمة المرور الحالية"
+  },
+  "successLogin": {
+    "en": "Successfully Logged In",
+    "ar": "تم تسجيل الدخول بنجاح"
+  },
+  "willBeRedirected": {
+    "en": "You'll be redirected now to the app",
+    "ar": "سيتم تحويلك الان الى التبطيق"
+  },
+  "copyright": {
+    "en": "All Rights Reserved © %d",
+    "ar": "جميع الحقوق محفوظة © %d"
+  },
+  "close": {
+    "en": "Close",
+    "ar": "إغلاق"
+  },
+  "users": {
+    "en": "Users",
+    "ar": "الإداريين"
+  },
+  "logout": {
+    "en": "Logout",
+    "ar": "خروج"
+  },
+  "accountSettings": {
+    "en": "Account Settings",
+    "ar": "إعدادات الحساب"
+  },
+  "saveReset": {
+    "en": "Save & Clear",
+    "ar": "حفظ  و استعادة"
+  },
+  "save": {
+    "en": "Save",
+    "ar": "حفظ"
+  },
+  "saveAndClear": {
+    "en": "Save & Clear",
+    "ar": "حفظ  و استعادة"
+  },
+  "didYouKnow": {
+    "en": "Did you know?",
+    "ar": "هل تعلم؟"
+  },
+  "saveAndReset": {
+    "en": "Save & Reset",
+    "ar": "حفظ واستعادة"
+  },
+  "moduleNameTip": {
+    "en": "The name will be only visible in the admin panel and will not be shown in the website/application",
+    "ar": "سيتم عرض الاسم فقط في لوحة التحكم ولن يظهر في الموقع/التطبيق"
+  },
+  "sortOrderTip": {
+    "en": "The higher the sort order value, the higher the item will be displayed in the list",
+    "ar": "كلما كانت قيمة ترتيب العرض أكبر, كلما كان له أولوية في الظهور أولا"
+  },
+  "pageNotFound": {
+    "en": "Sorry, Page not Found",
+    "ar": "عفوا، لم يتم العثور على الصفحة"
+  },
+  "pageNotAvailable": {
+    "en": "The page you are looking for not available!",
+    "ar": "الصفحة التي تبحث عنها غير متوفرة!"
+  },
+  "backToHome": {
+    "en": "Back to home",
+    "ar": "العودة إلى الرئيسية"
+  },
+  "sales": {
+    "en": "Sales",
+    "ar": "المبيعات"
+  },
+  "marketing": {
+    "en": "Marketing",
+    "ar": "التسويق"
+  },
+  "newsletter": {
+    "en": "Newsletter",
+    "ar": "النشرة البريدية"
+  },
+  "mobileCampaigns": {
+    "en": "Mobile Campaigns",
+    "ar": "الحملات الجوالية"
+  },
+  "title": {
+    "en": "Title",
+    "ar": "العنوان"
+  },
+  "content": {
+    "en": "Content",
+    "ar": "المحتوى"
+  },
+  "listItem": {
+    "en": "List :item",
+    "ar": "عرض :item"
+  },
+  "viewItem": {
+    "en": "View :item",
+    "ar": "عرض :item"
+  },
+  "permissionsList": {
+    "en": "Permissions List",
+    "ar": "قائمة الصلاحيات"
+  },
+  "user": {
+    "en": "User",
+    "ar": "إداري"
+  },
+  "usersGroup": {
+    "en": "Users Group",
+    "ar": "مجموعة الاداريين"
+  },
+  "usersGroups": {
+    "en": "Users Groups",
+    "ar": "مجموعات الاداريين"
+  },
+  "checkAll": {
+    "en": "Check All",
+    "ar": "تحديد الكل"
+  },
+  "displaying": {
+    "en": "Displaying",
+    "ar": "عرض"
+  },
+  "of": {
+    "en": "of",
+    "ar": "من"
+  },
+  "active": {
+    "en": "Active",
+    "ar": "مفعل"
+  },
+  "status": {
+    "en": "Status",
+    "ar": "الحالة"
+  },
+  "enabled": {
+    "en": "Enabled",
+    "ar": "مفعل"
+  },
+  "flag": {
+    "en": "Flag",
+    "ar": "العلم"
+  },
+  "countries": {
+    "en": "Countries",
+    "ar": "الدول"
+  },
+  "country": {
+    "en": "Country",
+    "ar": "دولة"
+  },
+  "currencies": {
+    "en": "Currencies",
+    "ar": "العملات"
+  },
+  "currency": {
+    "en": "Currency",
+    "ar": "عملة"
+  },
+  "code": {
+    "en": "Code",
+    "ar": "كود العملة"
+  },
+  "catalog": {
+    "en": "Catalog",
+    "ar": "الكتالوج"
+  },
+  "localization": {
+    "en": "Localization",
+    "ar": "المحتوى الجغرافي"
+  },
+  "media": {
+    "en": "Media",
+    "ar": "الميديا"
+  },
+  "invoice": {
+    "en": "Invoice",
+    "ar": "الفاتورة"
+  },
+  "total": {
+    "en": "Total",
+    "ar": "الاجمالي"
+  },
+  "symbol": {
+    "en": "Symbol",
+    "ar": "رمز العملة"
+  },
+  "customerDetails": {
+    "en": "Customer Details",
+    "ar": "بيانات العميل"
+  },
+  "viewProfile": {
+    "en": "View Profile",
+    "ar": "عرض الملف الشخصي"
+  },
+  "helloAdmin": {
+    "en": "Hello %s!",
+    "ar": "مرحبا %s!"
+  },
+  "whatHappensToday": {
+    "en": "Here's what's happening with your store today.",
+    "ar": "إليك ما يحدث بالمتجر اليوم."
+  },
+  "earnings": {
+    "en": "Earnings",
+    "ar": "الارباح"
+  },
+  "viewSales": {
+    "en": "View Sales",
+    "ar": "عرض المبيعات"
+  },
+  "viewOrders": {
+    "en": "View Orders",
+    "ar": "عرض الطلبات"
+  },
+  "orderSummary": {
+    "en": "Order Summary",
+    "ar": "ملخص الطلب"
+  },
+  "viewCustomers": {
+    "en": "View Customers",
+    "ar": "عرض العملاء"
+  },
+  "pendingOrders": {
+    "en": "Pending Orders",
+    "ar": "طلبات قيد الانتظار"
+  },
+  "viewMore": {
+    "en": "View More",
+    "ar": "عرض المزيد"
+  },
+  "ordersToday": {
+    "en": "Orders Today",
+    "ar": "طلبات اليوم"
+  },
+  "weekRevenues": {
+    "en": "Week Revenues",
+    "ar": "إيرادات الأسبوع"
+  },
+  "saturday": {
+    "en": "Saturday",
+    "ar": "السبت"
+  },
+  "sunday": {
+    "en": "Sunday",
+    "ar": "الأحد"
+  },
+  "monday": {
+    "en": "Monday",
+    "ar": "الإثنين"
+  },
+  "tuesday": {
+    "en": "Tuesday",
+    "ar": "الثلاثاء"
+  },
+  "wednesday": {
+    "en": "Wednesday",
+    "ar": "الأربعاء"
+  },
+  "thursday": {
+    "en": "Thursday",
+    "ar": "الخميس"
+  },
+  "friday": {
+    "en": "Friday",
+    "ar": "الجمعة"
+  },
+  "january": {
+    "en": "January",
+    "ar": "يناير"
+  },
+  "february": {
+    "en": "February",
+    "ar": "فبراير"
+  },
+  "march": {
+    "en": "March",
+    "ar": "مارس"
+  },
+  "april": {
+    "en": "April",
+    "ar": "أبريل"
+  },
+  "may": {
+    "en": "May",
+    "ar": "مايو"
+  },
+  "june": {
+    "en": "June",
+    "ar": "يونيو"
+  },
+  "july": {
+    "en": "July",
+    "ar": "يوليو"
+  },
+  "august": {
+    "en": "August",
+    "ar": "أغسطس"
+  },
+  "september": {
+    "en": "September",
+    "ar": "سبتمبر"
+  },
+  "october": {
+    "en": "October",
+    "ar": "أكتوبر"
+  },
+  "november": {
+    "en": "November",
+    "ar": "نوفمبر"
+  },
+  "december": {
+    "en": "December",
+    "ar": "ديسمبر"
+  },
+  "yearSales": {
+    "en": "Year Sales",
+    "ar": "مبيعات السنة"
+  },
+  "storeYearSales": {
+    "en": "Store Year Sales",
+    "ar": "مبيعات المتجر للسنة"
+  },
+  "monthSales": {
+    "en": "Month Sales",
+    "ar": "مبيعات الشهر"
+  },
+  "storeMonthSales": {
+    "en": "Store Month Sales",
+    "ar": "مبيعات المتجر للشهر"
+  },
+  "weekOne": {
+    "en": "Week 1",
+    "ar": "الأسبوع الأول"
+  },
+  "weekTwo": {
+    "en": "Week 2",
+    "ar": "الأسبوع الثاني"
+  },
+  "weekThree": {
+    "en": "Week 3",
+    "ar": "الأسبوع الثالث"
+  },
+  "weekFour": {
+    "en": "Week 4",
+    "ar": "الأسبوع الرابع"
+  },
+  "weekFive": {
+    "en": "Week 5",
+    "ar": "الأسبوع الخامس"
+  },
+  "yearsSales": {
+    "en": "Years Sales",
+    "ar": "مبيعات السنوات"
+  },
+  "orderStatusSales": {
+    "en": "Order Status Sales",
+    "ar": "مبيعات حالات الطلب"
+  },
+  "orderStatusSalesTitle": {
+    "en": "Orders Sales Based on its current status",
+    "ar": "مبيعات الطلبات بناءً على حالتها الحالية"
+  },
+  "storeYearsSales": {
+    "en": "Store Years Sales",
+    "ar": "مبيعات المتجر للسنوات"
+  },
+  "yearOrders": {
+    "en": "Total Year Orders Over Months",
+    "ar": "إجمالي طلبات السنة على مدار الشهور"
+  },
+  "orderStatusOrders": {
+    "en": "Total Orders Status Orders",
+    "ar": "إجمالي حالات الطلبات"
+  },
+  "orderStatusOrdersTitle": {
+    "en": "Total Orders Based on its current status",
+    "ar": "إجمالي الطلبات بناءً على حالتها الحالية"
+  },
+  "yearsOrders": {
+    "en": "Total Years Orders",
+    "ar": "إجمالي طلبات السنوات"
+  },
+  "storeYearsOrders": {
+    "en": "Total Store Years Orders",
+    "ar": "إجمالي طلبات المتجر للسنوات"
+  },
+  "monthOrders": {
+    "en": "Total Month Orders",
+    "ar": "إجمالي طلبات الشهر"
+  },
+  "storeMonthsOrders": {
+    "en": "Total Store Months Orders",
+    "ar": "إجمالي طلبات المتجر للشهر"
+  },
+  "whoops": {
+    "en": "Whoops!",
+    "ar": "عفوا!"
+  },
+  "canceled": {
+    "en": "Canceled",
+    "ar": "ملغي"
+  },
+  "pending": {
+    "en": "Pending",
+    "ar": "قيد الانتظار"
+  },
+  "orderId": {
+    "en": "Order ID",
+    "ar": "رقم الطلب"
+  },
+  "shippingDetails": {
+    "en": "Shipping Details",
+    "ar": "بيانات الشحن"
+  },
+  "processing": {
+    "en": "Processing",
+    "ar": "قيد التجهيز"
+  },
+  "yesterday": {
+    "en": "Yesterday",
+    "ar": "أمس"
+  },
+  "shipped": {
+    "en": "Shipped",
+    "ar": "تم الشحن"
+  },
+  "delivered": {
+    "en": "Delivered",
+    "ar": "تم التسليم"
+  },
+  "cancelled": {
+    "en": "Cancelled",
+    "ar": "ملغي"
+  },
+  "returned": {
+    "en": "Returned",
+    "ar": "مرتجع"
+  },
+  "weeklyRevenuesOfStore": {
+    "en": "Weekly Revenues of the store",
+    "ar": "إيرادات المتجر الأسبوعية"
+  },
+  "revenuesMovements": {
+    "en": "Revenues Movements",
+    "ar": "حركة الإيرادات"
+  },
+  "weeklySalesOfStore": {
+    "en": "Weekly Sales of the store",
+    "ar": "مبيعات المتجر الأسبوعية"
+  },
+  "weekSales": {
+    "en": "Week Sales",
+    "ar": "مبيعات الأسبوع"
+  },
+  "salesMovements": {
+    "en": "Sales Movements",
+    "ar": "حركة المبيعات"
+  },
+  "paymentMethod": {
+    "en": "Payment Method",
+    "ar": "طريقة الدفع"
+  },
+  "shippingMethod": {
+    "en": "Shipping Method",
+    "ar": "طريقة الشحن"
+  },
+  "date": {
+    "en": "Date",
+    "ar": "التاريخ"
+  },
+  "totalItems": {
+    "en": "Total Items",
+    "ar": "إجمالي المنتجات"
+  },
+  "finalPrice": {
+    "en": "Final Price",
+    "ar": "السعر النهائي"
+  },
+  "currencyLabel": {
+    "en": "Currency Label",
+    "ar": "مسمى العملة"
+  },
+  "currencyLabelHint": {
+    "en": "The label will be shown beside the price",
+    "ar": "سيتم عرض المسمى بجوار السعر"
+  },
+  "coupons": {
+    "en": "Coupons",
+    "ar": "الكوبونات"
+  },
+  "coupon": {
+    "en": "Coupon",
+    "ar": "كوبون"
+  },
+  "couponCode": {
+    "en": "Coupon Code",
+    "ar": "كود الكوبون"
+  },
+  "newsletterSubscribers": {
+    "en": "Newsletter Subscribers",
+    "ar": "المشتركين في النشرة البريدية"
+  },
+  "metaDescription": {
+    "en": "Meta Description",
+    "ar": "الوصف التعريفي"
+  },
+  "customersSettings": {
+    "en": "Customers Settings",
+    "ar": "إعدادات العملاء"
+  },
+  "autoVerifyAccount": {
+    "en": "Auto Verify Account",
+    "ar": "التفعيل التلقائي للحساب"
+  },
+  "autoVerifyAccountHint": {
+    "en": "If enabled, the account will be verified automatically after registration",
+    "ar": "إذا تم تفعيل هذا الخيار، سيتم التحقق من الحساب تلقائياً بعد التسجيل"
+  },
+  "informativePages": {
+    "en": "Informative Pages",
+    "ar": "الصفحات التعريفية"
+  },
+  "disabled": {
+    "en": "Disabled",
+    "ar": "معطل"
+  },
+  "login": {
+    "en": "Login",
+    "ar": "تسجيل الدخول"
+  },
+  "forgotPassword": {
+    "en": "Forgot password?",
+    "ar": "نسيت كلمة المرور؟"
+  },
+  "name": {
+    "en": "Name",
+    "ar": "الاسم"
+  },
+  "description": {
+    "en": "Description",
+    "ar": "الوصف"
+  },
+  "shortDescription": {
+    "en": "Short Description",
+    "ar": "الوصف المختصر"
+  },
+  "reset": {
+    "en": "Reset",
+    "ar": "استعادة"
+  },
+  "moreFilters": {
+    "en": "More Filters",
+    "ar": "مزيد من الفلاتر"
+  },
+  "actions": {
+    "en": "Actions",
+    "ar": "التحكم"
+  },
+  "edit": {
+    "en": "Edit",
+    "ar": "تعديل"
+  },
+  "delete": {
+    "en": "Delete",
+    "ar": "حذف"
+  },
+  "create": {
+    "en": "Create",
+    "ar": "إضافة"
+  },
+  "confirm": {
+    "en": "Confirm",
+    "ar": "تأكيد"
+  },
+  "cancel": {
+    "en": "Cancel",
+    "ar": "إلفاء"
+  },
+  "loggedOutSuccess": {
+    "en": "You Have Been Logged Out Successfully",
+    "ar": "تم تسجيل الخروج بنجاح"
+  },
+  "loggedSuccessfully": {
+    "en": "You Have Been Logged In Successfully",
+    "ar": "تم تسجيل الدخول بنجاح"
+  },
+  "layoutSettings": {
+    "en": "Layout Settings",
+    "ar": "إعدادات التصميم"
+  },
+  "darkMode": {
+    "en": "Dark Mode",
+    "ar": "الوضع الداكن"
+  },
+  "lightMode": {
+    "en": "Light Mode",
+    "ar": "الوضع الفاتح"
+  },
+  "noResults": {
+    "en": "No Results",
+    "ar": "لا توجد نتائج"
+  },
+  "customers": {
+    "en": "Customers",
+    "ar": "العملاء"
+  },
+  "customer": {
+    "en": "Customer",
+    "ar": "عميل"
+  },
+  "customersGroups": {
+    "en": "Customers Groups",
+    "ar": "مجموعات العملاء"
+  },
+  "customersGroup": {
+    "en": "Customers Group",
+    "ar": "مجموعة العملاء"
+  },
+  "confirmDeleteHeading": {
+    "en": "Delete Confirm",
+    "ar": "تأكيد الحذف"
+  },
+  "remove": {
+    "en": "Remove",
+    "ar": "حذف"
+  },
+  "update": {
+    "en": "Update",
+    "ar": "تعديل"
+  },
+  "resetPassword": {
+    "en": "Reset Password",
+    "ar": "استعادة كلمة المرور"
+  },
+  "refresh": {
+    "en": "Refresh",
+    "ar": "إعادة تحميل"
+  },
+  "email": {
+    "en": "Email Address",
+    "ar": "البريد الالكتروني"
+  },
+  "password": {
+    "en": "Password",
+    "ar": "كلمة المرور"
+  },
+  "confirmPassword": {
+    "en": "Confirm Password",
+    "ar": "تأكيد كلمة المرور"
+  },
+  "image": {
+    "en": "Image",
+    "ar": "الصورة"
+  },
+  "value": {
+    "en": "Value",
+    "ar": "القيمة"
+  },
+  "moreImages": {
+    "en": "More Images",
+    "ar": "مزيد من الصور"
+  },
+  "primaryImage": {
+    "en": "Primary Image",
+    "ar": "الصورة الرئيسية"
+  },
+  "general": {
+    "en": "General",
+    "ar": "عام"
+  },
+  "settings": {
+    "en": "Settings",
+    "ar": "الإعدادات"
+  },
+  "logo": {
+    "en": "Logo",
+    "ar": "الشعار"
+  },
+  "images": {
+    "en": "Images",
+    "ar": "الصور"
+  },
+  "banners": {
+    "en": "Banners",
+    "ar": "البنرات"
+  },
+  "banner": {
+    "en": "Banner",
+    "ar": "بنر"
+  },
+  "sliders": {
+    "en": "Sliders",
+    "ar": "السلايدشو"
+  },
+  "simpleSliders": {
+    "en": "Simple Sliders",
+    "ar": "سلايد شو مبسط"
+  },
+  "simpleSliderDescription": {
+    "en": "Simple sliders are used to display list of images in a carousel.",
+    "ar": "عبارة عن مجموعة من الصور يتم عرضها في سلايد شو متحرك "
+  },
+  "homeLayoutDescription": {
+    "en": "Home Layout is list of various modules that will customize your home page based on your preferences.",
+    "ar": "اعدادات الصفحة الرئيسية عبارة عن مجموعة من الموديولات التي يتم عرضها في الصفحة الرئيسية بناءا على اختياراتك من الموديولات المختلفة."
+  },
+  "simpleSlider": {
+    "en": "Simple Sliders",
+    "ar": "سلايد شو مبسط"
+  },
+  "appearanceSettings": {
+    "en": "Appearance Settings",
+    "ar": "إعدادات الظهور"
+  },
+  "moduleInStrictAreas": {
+    "en": "Display Module in Certain Areas",
+    "ar": "عرض الموديول في مناطق مححددة"
+  },
+  "appearsOnlyInCertainAreasHint": {
+    "en": "Determine if the module should appear in certain countries/regions/cities",
+    "ar": "تحديد ما إذا كان الموديول يظهر فقط في بعض الدول/المناطق/المدن"
+  },
+  "addImage": {
+    "en": "Add Image",
+    "ar": "إضافة صورة"
+  },
+  "totalImages": {
+    "en": "Total Images",
+    "ar": "إجمالي الصور"
+  },
+  "district": {
+    "en": "District",
+    "ar": "الحي"
+  },
+  "condition": {
+    "en": "Condition",
+    "ar": "الحالة"
+  },
+  "new": {
+    "en": "New",
+    "ar": "جديد"
+  },
+  "used": {
+    "en": "Used",
+    "ar": "مستعمل"
+  },
+  "refurbished": {
+    "en": "Refurbished",
+    "ar": "محدث (Refurbished)"
+  },
+  "slider": {
+    "en": "Slider",
+    "ar": "سلايدر"
+  },
+  "productsSettings": {
+    "en": "Products Settings",
+    "ar": "إعدادات المنتجات"
+  },
+  "units": {
+    "en": "Units",
+    "ar": "الوحدات"
+  },
+  "unit": {
+    "en": "Unit",
+    "ar": "الوحدة"
+  },
+  "unitValue": {
+    "en": "Unit Value",
+    "ar": "قيمة الوحدة"
+  },
+  "productDimensions": {
+    "en": "Product Dimensions",
+    "ar": "أبعاد المنتج"
+  },
+  "productPackageDimensions": {
+    "en": "Product Package Dimensions",
+    "ar": "أبعاد حزمة المنتج"
+  },
+  "weightUnit": {
+    "en": "Weight Unit",
+    "ar": "وحدة الوزن"
+  },
+  "weight": {
+    "en": "Weight",
+    "ar": "الوزن"
+  },
+  "widthUnit": {
+    "en": "Width Unit",
+    "ar": "وحدة العرض"
+  },
+  "width": {
+    "en": "Width",
+    "ar": "العرض"
+  },
+  "heightUnit": {
+    "en": "Height Unit",
+    "ar": "وحدة الارتفاع"
+  },
+  "height": {
+    "en": "Height",
+    "ar": "الارتفاع"
+  },
+  "lengthUnit": {
+    "en": "Length Unit",
+    "ar": "وحدة الطول"
+  },
+  "length": {
+    "en": "Length",
+    "ar": "الطول"
+  },
+  "packageWeightUnit": {
+    "en": "Package Weight Unit",
+    "ar": "وحدة الوزن الحزمة"
+  },
+  "packageWeight": {
+    "en": "Package Weight",
+    "ar": "وزن الحزمة"
+  },
+  "packageWidthUnit": {
+    "en": "Package Width Unit",
+    "ar": "وحدة العرض الحزمة"
+  },
+  "packageWidth": {
+    "en": "Package Width",
+    "ar": "عرض الحزمة"
+  },
+  "packageHeightUnit": {
+    "en": "Package Height Unit",
+    "ar": "وحدة الارتفاع الحزمة"
+  },
+  "packageHeight": {
+    "en": "Package Height",
+    "ar": "ارتفاع الحزمة"
+  },
+  "packageLengthUnit": {
+    "en": "Package Length Unit",
+    "ar": "وحدة الطول الحزمة"
+  },
+  "packageLength": {
+    "en": "Package Length",
+    "ar": "طول الحزمة"
+  },
+  "unitType": {
+    "en": "Unit Type",
+    "ar": "نوع الوحدة"
+  },
+  "type": {
+    "en": "Type",
+    "ar": "النوع"
+  },
+  "text": {
+    "en": "Text",
+    "ar": "نص"
+  },
+  "color": {
+    "en": "Color",
+    "ar": "اللون"
+  },
+  "options": {
+    "en": "Options",
+    "ar": "الخيارات"
+  },
+  "option": {
+    "en": "Option",
+    "ar": "الخيار"
+  },
+  "icon": {
+    "en": "Icon",
+    "ar": "الأيقونة"
+  },
+  "updatedSuccessfully": {
+    "en": "Updated Successfully",
+    "ar": "تم تحديث البيانات بنجاح"
+  },
+  "itemSaved": {
+    "en": "%s has been saved successfully.",
+    "ar": "تم الحفظ بنجاح"
+  },
+  "somethingWentWrong": {
+    "en": "Something Went wrong, please try again later.",
+    "ar": "حدث خطأ ما, من فضلك حاول مرة أخرى في وقت لاحق."
+  },
+  "errorHeading": {
+    "en": "Error!",
+    "ar": "خطأ!"
+  },
+  "accessDeniedReason": {
+    "en": "Make sure you have full access to this page. If you are not sure, please contact your administrator.",
+    "ar": "تأكد من انك تملك صلاحيات كاملة لهذه الصفحة. إذا لم تكن متأكداً، من فضلك تواصل مع مدير النظام."
+  },
+  "notFoundPageTitle": {
+    "en": "Something is not right...",
+    "ar": "هناك خطأ ما..."
+  },
+  "notFoundPageDescription": {
+    "en": "Page you are trying to open does not exist. You may have mistyped the address, or the page has been moved to another URL. If you think this is an error contact support.",
+    "ar": "الصفحة التي تحاول فتحها غير موجودة. ربما أدخلت عنواناً خاطئاً، أو تم نقل الصفحة إلى عنوان آخر. إذا كنت تعتقد أن هذا خطأ، من فضلك تواصل مع الدعم الفني."
+  },
+  "goBackHome": {
+    "en": "Get back to home page",
+    "ar": "العودة إلى الصفحة الرئيسية"
+  },
+  "products": {
+    "en": "Products",
+    "ar": "المنتجات"
+  },
+  "noRelatedProducts": {
+    "en": "No Related Products",
+    "ar": "لا يوجد منتجات مرتبطة"
+  },
+  "product": {
+    "en": "Product",
+    "ar": "منتج"
+  },
+  "categories": {
+    "en": "Categories",
+    "ar": "الأقسام"
+  },
+  "category": {
+    "en": "Category",
+    "ar": "قسم"
+  },
+  "parentCategory": {
+    "en": "Parent Category",
+    "ar": "القسم الرئيسي"
+  },
+  "brands": {
+    "en": "Brands",
+    "ar": "الماركات"
+  },
+  "brand": {
+    "en": "Brand",
+    "ar": "ماركة"
+  },
+  "attributes": {
+    "en": "Attributes",
+    "ar": "المواصفات"
+  },
+  "attribute": {
+    "en": "Attribute",
+    "ar": "خاصية"
+  },
+  "attributesGroups": {
+    "en": "Attributes Groups",
+    "ar": "مجموعات المواصفات"
+  },
+  "attributesGroup": {
+    "en": "Attributes Group",
+    "ar": "مجموعة المواصفات"
+  },
+  "multipleSelection": {
+    "en": "Multiple Selection",
+    "ar": "اختيار متعدد"
+  },
+  "singleSelection": {
+    "en": "Single Selection",
+    "ar": "خيار واحد"
+  },
+  "addOption": {
+    "en": "Add Option",
+    "ar": "إضافة خيار"
+  },
+  "price": {
+    "en": "Price",
+    "ar": "السعر"
+  },
+  "required": {
+    "en": "Required",
+    "ar": "مطلوب"
+  },
+  "removeOption": {
+    "en": "Remove Option",
+    "ar": "حذف الخيار"
+  },
+  "addOptionValue": {
+    "en": "Add Option Value",
+    "ar": "إضافة قيمة الخيار"
+  },
+  "selectValue": {
+    "en": "Select Value",
+    "ar": "اختر القيمة"
+  },
+  "sku": {
+    "en": "SKU",
+    "ar": "SKU"
+  },
+  "model": {
+    "en": "Model",
+    "ar": "الموديل"
+  },
+  "totalUses": {
+    "en": "Total Uses",
+    "ar": "عدد الاستخدامات"
+  },
+  "fullScreen": {
+    "en": "Full Screen",
+    "ar": "ملء الشاشة"
+  },
+  "information": {
+    "en": "Information",
+    "ar": "المعلومات"
+  },
+  "faq": {
+    "en": "FAQ",
+    "ar": "الأسئلة الشائعة"
+  },
+  "basePrice": {
+    "en": "Base Price",
+    "ar": "السعر الأساسي"
+  },
+  "discountType": {
+    "en": "Discount Type",
+    "ar": "نوع الخصم"
+  },
+  "discountValue": {
+    "en": "Discount Value",
+    "ar": "قيمة الخصم"
+  },
+  "percentage": {
+    "en": "Percentage",
+    "ar": "نسبة مؤية"
+  },
+  "amount": {
+    "en": "Amount",
+    "ar": "قيمة"
+  },
+  "startsAt": {
+    "en": "Starts At",
+    "ar": "يبدأ في"
+  },
+  "endsAt": {
+    "en": "Ends At",
+    "ar": "ينتهي في"
+  },
+  "quantity": {
+    "en": "Quantity",
+    "ar": "الكمية"
+  },
+  "unlimitedQuantityHint": {
+    "en": "Set as Unlimited Quantity",
+    "ar": "وضع الكمية غير محدودة"
+  },
+  "typeToSearch": {
+    "en": "Type to search",
+    "ar": "اكتب لكي يتم البحث"
+  },
+  "subscribedAt": {
+    "en": "Subscribed At",
+    "ar": "تاريخ الاشتراك"
+  },
+  "infinityQuantity": {
+    "en": "Infinity Amount",
+    "ar": "كمية غير محدودة"
+  },
+  "maxUsage": {
+    "en": "Max Usage",
+    "ar": "الحد الأقصى للاستخدام"
+  },
+  "maxUserUsage": {
+    "en": "Max User Usage",
+    "ar": "الحد الأقصى للاستخدام لكل مستخدم"
+  },
+  "minOrderValue": {
+    "en": "Minimum Order Value",
+    "ar": "الحد الأدنى للطلب"
+  },
+  "maxDiscountValue": {
+    "en": "Maximum Discount Value",
+    "ar": "الحد الأقصى لقيمة الخصم"
+  },
+  "appliesOn": {
+    "en": "Applies On",
+    "ar": "ينطبق على"
+  },
+  "eventData": {
+    "en": "Event Data",
+    "ar": "بيانات الحدث"
+  },
+  "administratorGroup": {
+    "en": "Administrator Group",
+    "ar": "مجموعة الإداريين"
+  },
+  "usersList": {
+    "en": "Users List",
+    "ar": "قائمة الإداريين"
+  },
+  "minimumPurchaseQuantity": {
+    "en": "Minimum Purchase Quantity",
+    "ar": "الحد الأدنى للشراء"
+  },
+  "toggleTableFilters": {
+    "en": "Toggle Table Filters",
+    "ar": "تشغيل/إيقاف تصفية الجدول"
+  },
+  "specials": {
+    "en": "Specials",
+    "ar": "العروض"
+  },
+  "orders": {
+    "en": "Orders",
+    "ar": "الطلبات"
+  },
+  "order": {
+    "en": "Order",
+    "ar": "الطلب"
+  },
+  "phoneCode": {
+    "en": "Phone Code",
+    "ar": "رمز الهاتف"
+  },
+  "countryCode": {
+    "en": "Country Code",
+    "ar": "رمز الدولة"
+  },
+  "countryLocaleCode": {
+    "en": "Country Locale Code",
+    "ar": "لغة الدولة"
+  },
+  "the": {
+    "en": "%s",
+    "ar": "ال%s"
+  },
+  "link": {
+    "en": "Link",
+    "ar": "رابط"
+  },
+  "viewContactDetails": {
+    "en": "View Message Details",
+    "ar": "عرض تفاصيل الرسالة"
+  },
+  "productsReviews": {
+    "en": "Products Reviews",
+    "ar": "تقييمات المنتجات"
+  },
+  "filters": {
+    "en": "Filters",
+    "ar": "الفلاتر"
+  },
+  "filter": {
+    "en": "Filter",
+    "ar": "فلتر"
+  },
+  "pleaseSelect": {
+    "en": "Please Select",
+    "ar": "من فضلك اختر"
+  },
+  "emptyResults": {
+    "en": "No Results",
+    "ar": "لا يوجد نتائج"
+  },
+  "productCost": {
+    "en": "Product Cost",
+    "ar": "تكلفة المنتج"
+  },
+  "regions": {
+    "en": "Regions",
+    "ar": "المناطق"
+  },
+  "region": {
+    "en": "Region",
+    "ar": "منطقة"
+  },
+  "cities": {
+    "en": "Cities",
+    "ar": "المدن"
+  },
+  "city": {
+    "en": "City",
+    "ar": "مدينة"
+  },
+  "pages": {
+    "en": "Pages",
+    "ar": "الصفحات"
+  },
+  "page": {
+    "en": "Page",
+    "ar": "صفحة"
+  },
+  "customerProfile": {
+    "en": "%s's Profile",
+    "ar": "%s تفاصيل العميل "
+  },
+  "phoneVerified": {
+    "en": "Phone Verified",
+    "ar": "الهاتف مفعل"
+  },
+  "back": {
+    "en": "Back",
+    "ar": "الرجوع"
+  },
+  "addressBook": {
+    "en": "Address Book",
+    "ar": "دفتر العناوين"
+  },
+  "location": {
+    "en": "Location (Google Map)",
+    "ar": "الموقع (خرائط جوجل)"
+  },
+  "attachments": {
+    "en": "Attachments",
+    "ar": "المرفقات"
+  },
+  "address": {
+    "en": "Address",
+    "ar": "العنوان"
+  },
+  "orderStatus": {
+    "en": "Order Status",
+    "ar": "حالة الطلب"
+  },
+  "primaryAddress": {
+    "en": "Primary Address",
+    "ar": "العنوان الرئيسي"
+  },
+  "verifiedPhone": {
+    "en": "Verified Phone",
+    "ar": "هاتف مفعل"
+  },
+  "createdAt": {
+    "en": "Created At",
+    "ar": "تاريخ الإنشاء"
+  },
+  "paymentMethods": {
+    "en": "Payment Methods",
+    "ar": "طرق الدفع"
+  },
+  "taxLabel": {
+    "en": "Tax Label",
+    "ar": "اسم الضريبة"
+  },
+  "customersContacts": {
+    "en": "Customers Contacts",
+    "ar": "رسائل التواصل  للعملاء"
+  },
+  "totalProducts": {
+    "en": "Total Products",
+    "ar": "اجمالي المنتجات"
+  },
+  "relatedProducts": {
+    "en": "Related Products",
+    "ar": "المنتجات المتعلقة"
+  },
+  "contactUs": {
+    "en": "Contacts Messages",
+    "ar": "رسائل التواصل"
+  },
+  "subject": {
+    "en": "Subject",
+    "ar": "الموضوع"
+  },
+  "message": {
+    "en": "Message",
+    "ar": "الرسالة"
+  },
+  "reply": {
+    "en": "Reply",
+    "ar": "الرد"
+  },
+  "reports": {
+    "en": "Reports",
+    "ar": "التقارير"
+  },
+  "revenuesReports": {
+    "en": "Revenues Reports",
+    "ar": "تقارير الإيرادات"
+  },
+  "salesReports": {
+    "en": "Sales Reports",
+    "ar": "تقارير المبيعات"
+  },
+  "salesToday": {
+    "en": "Sales Today",
+    "ar": "مبيعات اليوم"
+  },
+  "salesYesterday": {
+    "en": "Sales Yesterday",
+    "ar": "مبيعات أمس"
+  },
+  "salesThisWeek": {
+    "en": "Sales This Week",
+    "ar": "مبيعات هذا الاسبوع"
+  },
+  "salesThisMonth": {
+    "en": "Sales This Month",
+    "ar": "مبيعات هذا الشهر"
+  },
+  "salesThisYear": {
+    "en": "Sales This Year",
+    "ar": "مبيعات هذا العام"
+  },
+  "totalSales": {
+    "en": "Total Sales",
+    "ar": "اجمالي المبيعات"
+  },
+  "ordersReports": {
+    "en": "Total Orders Reports",
+    "ar": "تقارير عدد الطلبات"
+  },
+  "smsConfigurations": {
+    "en": "SMS Configurations",
+    "ar": "إعدادات الرسائل النصية SMS"
+  },
+  "ordersConfigurations": {
+    "en": "Orders Configurations",
+    "ar": "إعدادات الطلبات"
+  },
+  "autoApproveReviews": {
+    "en": "Auto Approve Reviews",
+    "ar": "الموافقة التلقائية على التقييمات"
+  },
+  "weightInKilo": {
+    "en": "Weight In Kilo",
+    "ar": "الوزن بالكيلو"
+  },
+  "shippingWeight": {
+    "en": "Shipping Weight",
+    "ar": "وزن الشحن"
+  },
+  "shippingSettings": {
+    "en": "Shipping Settings",
+    "ar": "إعدادات الشحن"
+  },
+  "rating": {
+    "en": "Rating",
+    "ar": "التقييم"
+  },
+  "reviews": {
+    "en": "Reviews",
+    "ar": "التقييمات"
+  },
+  "comment": {
+    "en": "Comment",
+    "ar": "التعليق"
+  },
+  "compounds": {
+    "en": "Compounds",
+    "ar": "المجمعات السكنية"
+  },
+  "notifications": {
+    "en": "Notifications",
+    "ar": "الإشعارات"
+  },
+  "currencySymbol": {
+    "en": "Currency Symbol",
+    "ar": "رمز العملة"
+  },
+  "currencyValue": {
+    "en": "Currency Value",
+    "ar": "قيمة العملة"
+  },
+  "currencyCode": {
+    "en": "Currency Code",
+    "ar": "كود العملة"
+  },
+  "recordSavedSuccessfully": {
+    "en": "Record Saved Successfully",
+    "ar": "تم الحفظ بنجاح"
+  },
+  "markAsSeen": {
+    "en": "Mark As Seen",
+    "ar": "تمت القراءة"
+  },
+  "noNotifications": {
+    "en": "No Notifications",
+    "ar": "لا يوجد إشعارات"
+  },
+  "notificationDeletedSuccessfully": {
+    "en": "Notification Deleted Successfully",
+    "ar": "تم حذف الإشعار بنجاح"
+  },
+  "onOrderCreate": {
+    "en": "On Order Create",
+    "ar": "عند إنشاء طلب"
+  },
+  "onOrderCanceled": {
+    "en": "On Order Canceled",
+    "ar": "عند إلغاء طلب"
+  },
+  "updateOrderStatusItems": {
+    "en": "Update Order Status Items as well",
+    "ar": "تحديث حالة العناصر في الطلب أيضا"
+  },
+  "replyToMessage": {
+    "en": "Reply to Message",
+    "ar": "الرد على الرسالة"
+  },
+  "hasReply": {
+    "en": "Has Reply",
+    "ar": "تم الرد"
+  },
+  "replied": {
+    "en": "Replied",
+    "ar": "تم الرد"
+  },
+  "replyHasBeenSent": {
+    "en": "Reply Has Been Sent Successfully",
+    "ar": "تم إرسال الرد بنجاح"
+  },
+  "send": {
+    "en": "Send",
+    "ar": "إرسال"
+  },
+  "repliedBy": {
+    "en": "Replied By",
+    "ar": "تم الرد بواسطة"
+  },
+  "repliedAt": {
+    "en": "Replied At",
+    "ar": "تم الرد في"
+  },
+  "host": {
+    "en": "Host",
+    "ar": "رابط الـ Host"
+  },
+  "port": {
+    "en": "Port",
+    "ar": "رقم البورت"
+  },
+  "emailConfigurations": {
+    "en": "Email Configurations",
+    "ar": "إعدادات البريد الإلكتروني"
+  },
+  "displayInIOS": {
+    "en": "Display In IOS",
+    "ar": "عرض في IOS"
+  },
+  "displayInAndroid": {
+    "en": "Display In Android",
+    "ar": "عرض في Android"
+  },
+  "displayInWeb": {
+    "en": "Display In Web",
+    "ar": "عرض في الموقع"
+  },
+  "homePage": {
+    "en": "Home Page",
+    "ar": "الصفحة الرئيسية"
+  },
+  "sortOrder": {
+    "en": "Sort Order",
+    "ar": "ترتيب العرض"
+  },
+  "generalSettings": {
+    "en": "General Settings",
+    "ar": "الإعدادات العامة"
+  },
+  "username": {
+    "en": "Username",
+    "ar": "اسم المستخدم"
+  },
+  "layoutsSettings": {
+    "en": "Layouts Settings",
+    "ar": "إعدادات الصفحات"
+  },
+  "updateLayoutSettings": {
+    "en": "Update Layout Settings",
+    "ar": "تحديث إعدادات الصفحات"
+  },
+  "homeLayout": {
+    "en": "Home Layout",
+    "ar": "موديولات الصفحة الرئيسية"
+  },
+  "oneBanner": {
+    "en": "One Banner",
+    "ar": "بنر واحد"
+  },
+  "twoBanners": {
+    "en": "Two Banners",
+    "ar": "بنرين"
+  },
+  "bestSeller": {
+    "en": "Best Seller",
+    "ar": "الأكثر مبيعا"
+  },
+  "newArrivals": {
+    "en": "New Arrivals",
+    "ar": "وصل حديثا"
+  },
+  "featured": {
+    "en": "Featured Products",
+    "ar": "المنتجات المميزة"
+  },
+  "recommended": {
+    "en": "Recommended Products",
+    "ar": "المنتجات الموصى بها"
+  },
+  "categoryWithProducts": {
+    "en": "Category With Products",
+    "ar": "القسم مع المنتجات"
+  },
+  "module": {
+    "en": "Module",
+    "ar": "الموديول"
+  },
+  "limit": {
+    "en": "Limit",
+    "ar": "أقصى عدد"
+  },
+  "brandWithProducts": {
+    "en": "Brand With Products",
+    "ar": "الماركة  مع المنتجات"
+  },
+  "productsCollection": {
+    "en": "Products Collection",
+    "ar": "مجموعة مختارة من المنتجات"
+  },
+  "allTotalProducts": {
+    "en": "All Total Products",
+    "ar": "اجمالي المنتجات الكلية"
+  },
+  "allTotalProductsHint": {
+    "en": "This is the total products of this category and all of its children categories's products as well.",
+    "ar": "هذه هي المنتجات الكلية لهذه الفئة وكل الفئات الفرعية لهذه الفئة"
+  },
+  "taxLabelHint": {
+    "en": "If empty, the tax label will not be displayed in the product details page",
+    "ar": "إذا كان فارغا، لن يتم عرض اسم الضريبة في صفحة تفاصيل المنتج"
+  },
+  "taxRate": {
+    "en": "Tax Rate",
+    "ar": "نسبة الضريبة"
+  },
+  "taxRateHint": {
+    "en": "Define the tax rate perctange that will be calculated from the product price.",
+    "ar": "حدد النسبة المئوية للضريبة التي سيتم حسابها من سعر المنتج."
+  },
+  "socialMediaSettings": {
+    "en": "Social Media Settings",
+    "ar": "مواقع التواصل الإجتماعي"
+  },
+  "storeName": {
+    "en": "Store Name",
+    "ar": "اسم المتجر"
+  },
+  "applicationName": {
+    "en": "Application Name",
+    "ar": "اسم التطبيق"
+  },
+  "websiteName": {
+    "en": "Website Name",
+    "ar": "اسم الموقع"
+  },
+  "websiteDescription": {
+    "en": "Website Description",
+    "ar": "وصف الموقع"
+  },
+  "settingsUpdatedSuccessfully": {
+    "en": "Settings Have Been Updated Successfully",
+    "ar": "تم تحديث الإعدادات بنجاح"
+  },
+  "taxIncluded": {
+    "en": "Tax Included",
+    "ar": "السعر شامل الضريبة"
+  },
+  "taxIncludedHint": {
+    "en": "If checked, the tax will be included in the product price",
+    "ar": "إذا تم تحديده، سيتم عرض السعر شامل الضريبة"
+  },
+  "contactSettings": {
+    "en": "Contact Settings",
+    "ar": "إعدادات التواصل"
+  },
+  "mobileAppsSettings": {
+    "en": "Mobile Apps Settings",
+    "ar": "إعدادات تطبيقات الجوال"
+  },
+  "facebook": {
+    "en": "Facebook",
+    "ar": "فيسبوك"
+  },
+  "facebookAppId": {
+    "en": "Facebook App Id",
+    "ar": "Facebook App Id"
+  },
+  "walletBalance": {
+    "en": "Wallet Balance",
+    "ar": "رصيد المحفظة"
+  },
+  "wallet": {
+    "en": "Wallet",
+    "ar": "المحفظة"
+  },
+  "withdraw": {
+    "en": "Withdraw",
+    "ar": "سحب"
+  },
+  "deposit": {
+    "en": "Deposit",
+    "ar": "إيداع"
+  },
+  "reason": {
+    "en": "Reason",
+    "ar": "السبب"
+  },
+  "notes": {
+    "en": "Notes",
+    "ar": "ملاحظات"
+  },
+  "walletTransaction": {
+    "en": "Wallet Transaction",
+    "ar": "معاملة المحفظة"
+  },
+  "transactionType": {
+    "en": "Transaction Type",
+    "ar": "نوع المعاملة"
+  },
+  "pleaseSelectTransactionType": {
+    "en": "Please Select Transaction Type",
+    "ar": "يرجى اختيار نوع المعاملة"
+  },
+  "rowaadStore": {
+    "en": "Matjar Rowaad",
+    "ar": "متجر رواد"
+  },
+  "workTimes": {
+    "en": "Work Times",
+    "ar": "مواعيد العمل"
+  },
+  "isPickupAvailable": {
+    "en": "Pickup from branch",
+    "ar": "الاستلام من الفرع"
+  },
+  "primaryBranch": {
+    "en": "Primary Branch",
+    "ar": "الفرع الرئيسي"
+  },
+  "contactData": {
+    "en": "Contact Info",
+    "ar": "بيانات الاتصال"
+  },
+  "branches": {
+    "en": "Branches",
+    "ar": "الفروع"
+  },
+  "defaultCurrency": {
+    "en": "Default Currency",
+    "ar": "العملة الافتراضية"
+  },
+  "defaultCountry": {
+    "en": "Default Country",
+    "ar": "الدولة الافتراضية"
+  },
+  "branch": {
+    "en": "Branch",
+    "ar": "فرع"
+  },
+  "productBranchesHint": {
+    "en": "Select the branches that will be available for this product, if no branches are selected, the product will be available for all branches",
+    "ar": "حدد الفروع التي سيتم توفرها لهذا المنتج، إذا لم يتم تحديد الفروع، سيتم توفر المنتج لجميع الفروع"
+  },
+  "pleaseSelectBranches": {
+    "en": "Please Select Branches that will be available for the product",
+    "ar": "يرجى تحديد الفروع التي سيتم توفرها للمنتج"
+  },
+  "itemsInCart": {
+    "en": "Items In Cart",
+    "ar": "المنتجات في السلة"
+  },
+  "itemsInWishlist": {
+    "en": "Items In Wishlist",
+    "ar": "المنتجات في المفضلة"
+  },
+  "theBranch": {
+    "en": "Branch",
+    "ar": "الفرع"
+  },
+  "addBranch": {
+    "en": "Add Branch",
+    "ar": "إضافة فرع"
+  },
+  "totalOrders": {
+    "en": "Total Orders",
+    "ar": "إجمالي الطلبات"
+  },
+  "totalPurchases": {
+    "en": "Total Purchases",
+    "ar": "إجمالي المشتريات"
+  },
+  "facebookAppSecret": {
+    "en": "Facebook App Secret",
+    "ar": "Facebook App Secret"
+  },
+  "subscribedToNewsletter": {
+    "en": "Subscribed To Newsletter",
+    "ar": "مشترك في النشرة البريدية"
+  },
+  "services": {
+    "en": "Services",
+    "ar": "الخدمات"
+  },
+  "service": {
+    "en": "Service",
+    "ar": "خدمة"
+  },
+  "purchaseDate": {
+    "en": "Purchase Date",
+    "ar": "تاريخ الشراء"
+  },
+  "emailVerified": {
+    "en": "Email Verified",
+    "ar": "البريد الإلكتروني مفعل"
+  },
+  "saveCards": {
+    "en": "Save Cards",
+    "ar": "حفظ البطاقات"
+  },
+  "facebookPixel": {
+    "en": "Facebook Pixel",
+    "ar": "فيس بوك بكسل"
+  },
+  "facebookPixelCode": {
+    "en": "Facebook Pixel Code",
+    "ar": "كود فيس بوك بكسل"
+  },
+  "loginWithOtp": {
+    "en": "Login With OTP",
+    "ar": "يجب تسجيل الدخول بكود OTP"
+  },
+  "loginWithOtpHint": {
+    "en": "If checked, the customer will login only with phone number and receive an OTP that will be sent to his/her phone number.",
+    "ar": "إذا تم تحديده، سيتم تسجيل الدخول برقم الهاتف وسيتم إرسال كود OTP إلى رقم الهاتف الخاص به."
+  },
+  "loginWithOtpHintOnlyWithSMSEnabled": {
+    "en": "Please note this works only if SMS is enabled in the settings.",
+    "ar": "من فضلك تذكر أن هذا يعمل فقط إذا تم تمكين SMS في الإعدادات."
+  },
+  "loginWithApple": {
+    "en": "Login With Apple",
+    "ar": "تسجيل الدخول بواسطة أبل"
+  },
+  "loginWithAppleHint": {
+    "en": "If checked, the customer will login using his/her Apple account.",
+    "ar": "إذا تم تحديده، سيتم تسجيل الدخول بواسطة حساب أبل الخاص به."
+  },
+  "loginWithGmail": {
+    "en": "Login With Gmail",
+    "ar": "تسجيل الدخول بواسطة جوجل"
+  },
+  "loginWithGmailHint": {
+    "en": "If checked, the customer will login using his/her Gmail account.",
+    "ar": "إذا تم تحديده، سيتم تسجيل الدخول بواسطة حساب جوجل الخاص به."
+  },
+  "loginWithFacebook": {
+    "en": "Login With Facebook",
+    "ar": "تسجيل الدخول بواسطة فيس بوك"
+  },
+  "loginWithFacebookHint": {
+    "en": "If checked, the customer will login using his/her Facebook account.",
+    "ar": "إذا تم تحديده، سيتم تسجيل الدخول بواسطة حساب الفيس بوك الخاص به."
+  },
+  "twitter": {
+    "en": "Twitter",
+    "ar": "تويتر"
+  },
+  "instagram": {
+    "en": "Instagram",
+    "ar": "انستجرام"
+  },
+  "linkedin": {
+    "en": "LinkedIn",
+    "ar": "لينكد ان"
+  },
+  "youtube": {
+    "en": "Youtube",
+    "ar": "يوتيوب"
+  },
+  "pinterest": {
+    "en": "Pinterest",
+    "ar": "بنترست"
+  },
+  "telegram": {
+    "en": "Telegram",
+    "ar": "تيلجرام"
+  },
+  "snapchat": {
+    "en": "Snapchat",
+    "ar": "سناب شات"
+  },
+  "whatsapp": {
+    "en": "Whatsapp",
+    "ar": "واتساب"
+  },
+  "uploading": {
+    "en": "Uploading",
+    "ar": "جاري الرفع"
+  },
+  "uploaded": {
+    "en": "Uploaded",
+    "ar": "تم الرفع"
+  },
+  "cancelUploading": {
+    "en": "Cancel Uploading",
+    "ar": "إلغاء الرفع"
+  },
+  "dragDropFiles": {
+    "en": "Drop files here or click to upload.",
+    "ar": "اسحب الملفات هنا أو اضغط لرفعها."
+  },
+  "retry": {
+    "en": "Retry",
+    "ar": "إعادة المحاولة"
+  },
+  "fax": {
+    "en": "Fax",
+    "ar": "فاكس"
+  },
+  "google": {
+    "en": "Google",
+    "ar": "جوجل"
+  },
+  "firebase": {
+    "en": "Firebase",
+    "ar": "فايربوس"
+  },
+  "firebaseApiKey": {
+    "en": "Firebase API Key",
+    "ar": "مفاتح API فايربوس"
+  },
+  "googleMaps": {
+    "en": "Google Maps",
+    "ar": "جوجل ماب"
+  },
+  "googleMapApiKey": {
+    "en": "Google Map API Key",
+    "ar": "مفتاح API خرائط جوجل"
+  },
+  "googleAnalytics": {
+    "en": "Google Analytics",
+    "ar": "Google Analytics"
+  },
+  "googleAnalyticsCode": {
+    "en": "Google Analytics Code",
+    "ar": "كود Google Analytics"
+  },
+  "googleTagManager": {
+    "en": "Google Tag Manager",
+    "ar": "Google Tag Manager"
+  },
+  "googleTagManagerCode": {
+    "en": "Google Tag Manager Code",
+    "ar": "كود Google Tag Manager"
+  },
+  "facebookApp": {
+    "en": "Facebook App",
+    "ar": "تطبيق فيسبوك"
+  },
+  "maintenance": {
+    "en": "Maintenance",
+    "ar": "وضع الصيانة"
+  },
+  "maintenanceHint": {
+    "en": "When activated, all applications and websites will be in maintenance mode.",
+    "ar": "عند تفعيله، سيتم تشغيل جميع التطبيقات والمواقع في وضع الصيانة."
+  },
+  "maintenanceWeb": {
+    "en": "Maintenance Web",
+    "ar": "وضع الصيانة للموقع"
+  },
+  "maintenanceWebHint": {
+    "en": "When activated, the website only will be in maintenance mode.",
+    "ar": "عند تفعيله، سيتم تشغيل الموقع فقط في وضع الصيانة."
+  },
+  "maintenanceApps": {
+    "en": "Maintenance Apps",
+    "ar": "وضع الصيانة للتطبيقات"
+  },
+  "maintenanceAppsHint": {
+    "en": "When actiavted, all mobile applications will be in maintenance mode.",
+    "ar": "عند تفعيله، سيتم تشغيل جميع التطبيقات المحمولة في وضع الصيانة."
+  },
+  "forceUpdateHint": {
+    "en": "When activated, the application will be forced to be updated before using it.",
+    "ar": "عند تفعيله، سيتم تحديث التطبيق قبل استخدامه."
+  },
+  "maintenanceIOS": {
+    "en": "Maintenance IOS",
+    "ar": "وضع الصيانة  iOS"
+  },
+  "maintenanceIOSHint": {
+    "en": "When activated, all iOS applications will be in maintenance mode.",
+    "ar": "عند تفعيله، سيتم تشغيل جميع تطبيقات iOS المحمولة في وضع الصيانة."
+  },
+  "maintenanceAndroid": {
+    "en": "Maintenance Android",
+    "ar": "وضع الصيانة  Android"
+  },
+  "maintenanceAndroidHint": {
+    "en": "When activated, all Android applications will be in maintenance mode.",
+    "ar": "عند تفعيله، سيتم تشغيل جميع تطبيقات Android المحمولة في وضع الصيانة."
+  },
+  "ios": {
+    "en": "iOS",
+    "ar": "الايفون"
+  },
+  "android": {
+    "en": "Android",
+    "ar": "الاندرويد"
+  },
+  "version": {
+    "en": "Version",
+    "ar": "الإصدار"
+  },
+  "onlinePayment": {
+    "en": "Online Payment",
+    "ar": "الدفع اون لاين"
+  },
+  "cashOnDelivery": {
+    "en": "Cash On Delivery",
+    "ar": "الدفع عند الاستلام"
+  },
+  "cashOnDeliveryHint": {
+    "en": "When activated, customer will be able to pay with cash on delivery.",
+    "ar": "عند تفعيله، سيتم تمكين العميل من الدفع عند الاستلام."
+  },
+  "payAtStore": {
+    "en": "Pay At Store",
+    "ar": "الدفع في المتجر"
+  },
+  "payAtStoreHint": {
+    "en": "When activated, customer will be able to pay at store.",
+    "ar": "عند تفعيله، سيتم تمكين العميل من الدفع في المتجر."
+  },
+  "onlinePaymentHint": {
+    "en": "When activated, customers will be able to pay online by Visa/Credit Card.",
+    "ar": "عند تفعيله، سيتم تفعيل دفع العملاء عن طريق الكارتات الائتمانية والفيزا."
+  },
+  "onlinePaymentData": {
+    "en": "Online Payment Data",
+    "ar": "بيانات الدفع اون لاين"
+  },
+  "mode": {
+    "en": "Mode",
+    "ar": "الحالة"
+  },
+  "live": {
+    "en": "Live",
+    "ar": "لايف"
+  },
+  "paymentIntegrationAppName": {
+    "en": "App Name",
+    "ar": "اسم التطبيق"
+  },
+  "businessId": {
+    "en": "Business ID",
+    "ar": "رقم الحساب (البزنس اي دي)"
+  },
+  "apiVersion": {
+    "en": "API Version",
+    "ar": "رقم اصدار الت API"
+  },
+  "url": {
+    "en": "URL",
+    "ar": "الرابط"
+  },
+  "channel": {
+    "en": "Channel",
+    "ar": "القناة (التشنل)"
+  },
+  "noon": {
+    "en": "Noon",
+    "ar": "نون"
+  },
+  "question": {
+    "en": "Question",
+    "ar": "السؤال"
+  },
+  "answer": {
+    "en": "Answer",
+    "ar": "الاجابة"
+  },
+  "testAccountSettings": {
+    "en": "Test Account Settings",
+    "ar": "إعدادات الحساب التجريبي"
+  },
+  "liveAccountSettings": {
+    "en": "Live Account Settings",
+    "ar": "إعدادات الحساب الحي"
+  },
+  "displayRemainingStock": {
+    "en": "Display Remaining Stock",
+    "ar": "عرض المتبقي بالمخزن"
+  },
+  "displayRemainingStockHint": {
+    "en": "When activated, the remaining stock will be displayed in the product details page, (Will be displayed if product quantity is not set to unlimted).",
+    "ar": "عند تفعيله، سيتم عرض المتبقي بالمخزون في صفحة تفاصيل المنتج، (سيتم عرض المتبقي إذا لم يتم تعيين كمية المنتج إلى غير محدودة)."
+  },
+  "mada": {
+    "en": "Mada",
+    "ar": "مدى"
+  },
+  "madaHint": {
+    "en": "When activated, customers will be able to pay online using Mada.",
+    "ar": "عند تفعيله، سيتم تفعيل دفع العملاء عن طريق مدى."
+  },
+  "forceUpdate": {
+    "en": "Force Update",
+    "ar": "التحديث الاجباري"
+  },
+  "sports": {
+    "en": "Sports",
+    "ar": "الرياضة"
+  },
+  "updateItem": {
+    "en": "Update :item",
+    "ar": "تحديث بيانات :item"
+  },
+  "metaTitleHint": {
+    "en": "If not set, it will be taken from the name field",
+    "ar": "إذا لم يتم تعيينه، سيتم الحصول عليه من حقل الاسم"
+  },
+  "metaDescriptionHint": {
+    "en": "If not set, it will be taken from the short description field",
+    "ar": "إذا لم يتم تعيينه، سيتم الحصول عليه من حقل الوصف المختصر"
+  },
+  "metaKeywordsHint": {
+    "en": "If not set, it will be taken from the name field, separate each keyword with a comma",
+    "ar": "إذا لم يتم تعيينه، سيتم الحصول عليه من حقل الاسم، افصل كل كلمة مفتاحية بفاصلة"
+  },
+  "keywords": {
+    "en": "Keywords",
+    "ar": "الكلمات الدليلية"
+  },
+  "property": {
+    "en": "Property",
+    "ar": "وحدة"
+  },
+  "createItem": {
+    "en": "Create new :item",
+    "ar": "إنشاء :item جديد"
+  },
+  "noData": {
+    "en": "No data found",
+    "ar": "لا يوجد بيانات"
+  },
+  "deleteBulk": {
+    "en": "Delete (:count)",
+    "ar": "حذف (:count)"
+  },
+  "confirmBulkRows": {
+    "en": "Are you sure you want to delete (:count) selected rows?",
+    "ar": "هل أنت متأكد من حذف (:count) الصفوف المحددة؟"
+  },
+  "bulkDeleteHeading": {
+    "en": "Bulk Delete Confirm",
+    "ar": "تأكيد حذف متعدد"
+  },
+  "cancelDelete": {
+    "en": "No don't delete it",
+    "ar": "لا، لا تحذفه"
+  },
+  "confirmDelete": {
+    "en": "Yes, delete it",
+    "ar": "تأكيد الحذف"
+  },
+  "singleDeleteHeading": {
+    "en": "Delete Confirm",
+    "ar": "تأكيد الحذف"
+  },
+  "deleting": {
+    "en": "Deleting...",
+    "ar": "جاري الحذف..."
+  },
+  "deletingInProgress": {
+    "en": "Deleting in progress...",
+    "ar": "جاري الحذف..."
+  },
+  "success": {
+    "en": "Success",
+    "ar": "تمت العملية بنجاح"
+  },
+  "deleteSuccess": {
+    "en": "Delete Operation has been done successfully",
+    "ar": "تمت عملية الحذف بنجاح"
+  },
+  "deleteError": {
+    "en": "Error while deleting",
+    "ar": "حدث خطأ أثناء الحذف"
+  },
+  "group": {
+    "en": "Group",
+    "ar": "مجموعة"
+  },
+  "isAdmin": {
+    "en": "Is Admin",
+    "ar": "مدير"
+  },
+  "isOwner": {
+    "en": "Is Owner",
+    "ar": "مالك"
+  },
+  "isAgent": {
+    "en": "Is Agent",
+    "ar": "وكيل"
+  },
+  "isDeveloper": {
+    "en": "Is Developer",
+    "ar": "مطور"
+  },
+  "deleteItem": {
+    "en": "Delete :item",
+    "ar": "حذف :item"
+  },
+  "confirmInput": {
+    "en": "Confirm :input",
+    "ar": "تأكيد :input"
+  },
+  "phonNumber": {
+    "en": "Phone Number",
+    "ar": "رقم الهاتف"
+  },
+  "confirmDeleteMessage": {
+    "en": "Are you sure you want to delete this record? This action is destructive and can not be restored.",
+    "ar": "هل أنت متأكد من أنك تريد حذف هذا السجل؟ هذا الإجراء غير قابل للتراجع عنه ولا يمكن إعادته."
+  },
+  "backToLogin": {
+    "en": "Back To Login",
+    "ar": "الرجوع لصفحة تسجيل الدخول"
+  },
+  "direction": {
+    "en": "Direction",
+    "ar": "الإتجاه"
+  },
+  "theme": {
+    "en": "Theme",
+    "ar": "التصميم"
+  },
+  "light": {
+    "en": "Light",
+    "ar": "فاتح"
+  },
+  "dark": {
+    "en": "Dark",
+    "ar": "داكن"
+  },
+  "enterEmail": {
+    "en": "Enter your Phone Number Or Email",
+    "ar": "ادخل البريد الالكتروني او رقم الهاتف"
+  },
+  "AccountSettings": {
+    "en": "Account Settings",
+    "ar": "إعدادات الحسآب"
+  },
+  "ChangeAccount": {
+    "en": "Change Account",
+    "ar": "تغيير الحسآب"
+  },
+  "logoutSuccessMessage": {
+    "en": "You have been logged out successfully",
+    "ar": "لقد تم تسجيل الخروج بنجاح"
+  },
+  "language": {
+    "en": "Language",
+    "ar": "اللغة"
+  },
+  "enterPass": {
+    "en": "Enter your password",
+    "ar": "ادخل كلمة المرور"
+  },
+  "analysis": {
+    "en": "Analysis",
+    "ar": "التحليلات"
+  },
+  "administrators": {
+    "en": "Administrators",
+    "ar": "المسؤولين"
+  },
+  "administrator": {
+    "en": "Administrator",
+    "ar": "المسؤول"
+  },
+  "accessDenied": {
+    "en": "Access Denied!",
+    "ar": "غير مصرح لك بدخول هذه الصفحة!"
+  },
+  "notFoundPage": {
+    "en": "Not Found Page",
+    "ar": "الصفحة المطلوبة غير موجودة"
+  },
+  "minimizeScreen": {
+    "en": "Minimize Screen",
+    "ar": "تصغير الشاشة"
+  },
+  "maximizeScreen": {
+    "en": "Maximize Screen",
+    "ar": "تكبير الشاشة"
+  },
+  "unreadMessages": {
+    "en": "Unread Messages",
+    "ar": "رسائل غير مقروءة"
+  },
+  "youHave": {
+    "en": "You have",
+    "ar": "لديك"
+  },
+  "clickOrDarg": {
+    "en": "Click Or darg and drop file to upload",
+    "ar": "اضغط او أسحب الملف"
+  },
+  "filtersOff": {
+    "en": "Filters Off",
+    "ar": "اخفاء الفلتر"
+  },
+  "filtersOn": {
+    "en": "Filters On",
+    "ar": "إظهار الفلتر"
+  },
+  "age": {
+    "en": "Age",
+    "ar": "عمر"
+  },
+  "copyRight": {
+    "en": "Copy Right Reversed",
+    "ar": "حقوق النشر محفوظة"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "useDefineForClassFields": true,
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "allowJs": false,
+    "skipLibCheck": true,
+    "esModuleInterop": false,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "noImplicitAny": false,
+    "forceConsistentCasingInFileNames": true,
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "baseUrl": "./",
+    "noEmit": true,
+    "paths": {
+      "apps/*": ["./src/apps/*"],
+      "shared/*": ["./src/shared/*"],
+      "design-system": ["src/apps/front-office/design-system"],
+      "design-system/*": ["src/apps/front-office/design-system/*"],
+      "assets/*": ["./src/shared/assets/*"],
+      "user": ["src/apps/front-office/account/user"],
+      "app/*": ["src/apps/front-office/*"]
+    },
+    "jsx": "react-jsx",
+    "plugins": [
+      {
+        "name": "typescript-styled-plugin",
+        "lint": {
+          "validProperties": ["label"]
+        }
+      }
+    ]
+  },
+  "include": ["src"],
+  "references": [{ "path": "./tsconfig.node.json" }]
+}

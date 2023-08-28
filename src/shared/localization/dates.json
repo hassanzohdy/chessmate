@@ -1,0 +1,194 @@
+{
+    "saturday": {
+        "en": "Saturday",
+        "ar": "السبت"
+    },
+    "sunday": {
+        "en": "Sunday",
+        "ar": "الأحد"
+    },
+    "monday": {
+        "en": "Monday",
+        "ar": "الإثنين"
+    },
+    "tuesday": {
+        "en": "Tuesday",
+        "ar": "الثلاثاء"
+    },
+    "wednesday": {
+        "en": "Wednesday",
+        "ar": "الأربعاء"
+    },
+    "thursday": {
+        "en": "Thursday",
+        "ar": "الخميس"
+    },
+    "friday": {
+        "en": "Friday",
+        "ar": "الجمعة"
+    },
+    "january": {
+        "en": "January",
+        "ar": "يناير"
+    },
+    "february": {
+        "en": "February",
+        "ar": "فبراير"
+    },
+    "march": {
+        "en": "March",
+        "ar": "مارس"
+    },
+    "april": {
+        "en": "April",
+        "ar": "أبريل"
+    },
+    "may": {
+        "en": "May",
+        "ar": "مايو"
+    },
+    "june": {
+        "en": "June",
+        "ar": "يونيو"
+    },
+    "july": {
+        "en": "July",
+        "ar": "يوليو"
+    },
+    "august": {
+        "en": "August",
+        "ar": "أغسطس"
+    },
+    "september": {
+        "en": "September",
+        "ar": "سبتمبر"
+    },
+    "october": {
+        "en": "October",
+        "ar": "أكتوبر"
+    },
+    "november": {
+        "en": "November",
+        "ar": "نوفمبر"
+    },
+    "december": {
+        "en": "December",
+        "ar": "ديسمبر"
+    },
+    "jan": {
+        "en": "Jan",
+        "ar": "يناير"
+    },
+    "feb": {
+        "en": "Feb",
+        "ar": "فبراير"
+    },
+    "mar": {
+        "en": "Mar",
+        "ar": "مارس"
+    },
+    "apr": {
+        "en": "Apr",
+        "ar": "أبريل"
+    },
+    "jun": {
+        "en": "Jun",
+        "ar": "يونيو"
+    },
+    "jul": {
+        "en": "Jul",
+        "ar": "يوليو"
+    },
+    "aug": {
+        "en": "Aug",
+        "ar": "أغسطس"
+    },
+    "sep": {
+        "en": "Sep",
+        "ar": "سبتمبر"
+    },
+    "oct": {
+        "en": "Oct",
+        "ar": "أكتوبر"
+    },
+    "nov": {
+        "en": "Nov",
+        "ar": "نوفمبر"
+    },
+    "dec": {
+        "en": "Dec",
+        "ar": "ديسمبر"
+    },
+    "today": {
+        "en": "Today",
+        "ar": "اليوم"
+    },
+    "yesterday": {
+        "en": "Yesterday",
+        "ar": "أمس"
+    },
+    "tomorrow": {
+        "en": "Tomorrow",
+        "ar": "غدا"
+    },
+    "ago": {
+        "en": "ago",
+        "ar": "منذ"
+    },
+    "fromNow": {
+        "en": "from now",
+        "ar": "من الآن"
+    },
+    "seconds": {
+        "en": "seconds",
+        "ar": "ثواني"
+    },
+    "minute": {
+        "en": "minute",
+        "ar": "دقيقة"
+    },
+    "minutes": {
+        "en": "minutes",
+        "ar": "دقائق"
+    },
+    "hour": {
+        "en": "hour",
+        "ar": "ساعة"
+    },
+    "hours": {
+        "en": "hours",
+        "ar": "ساعات"
+    },
+    "day": {
+        "en": "day",
+        "ar": "يوم"
+    },
+    "days": {
+        "en": "days",
+        "ar": "أيام"
+    },
+    "week": {
+        "en": "week",
+        "ar": "أسبوع"
+    },
+    "weeks": {
+        "en": "weeks",
+        "ar": "أسابيع"
+    },
+    "month": {
+        "en": "month",
+        "ar": "شهر"
+    },
+    "months": {
+        "en": "months",
+        "ar": "أشهر"
+    },
+    "year": {
+        "en": "year",
+        "ar": "سنة"
+    },
+    "years": {
+        "en": "years",
+        "ar": "سنوات"
+    }
+}

@@ -1,0 +1,198 @@
+{
+    "purple": {
+        "en": "Purple",
+        "ar": "أرجواني"
+    },
+    "red": {
+        "en": "Red",
+        "ar": "أحمر"
+    },
+    "blue": {
+        "en": "Blue",
+        "ar": "أزرق"
+    },
+    "green": {
+        "en": "Green",
+        "ar": "أخضر"
+    },
+    "yellow": {
+        "en": "Yellow",
+        "ar": "أصفر"
+    },
+    "orange": {
+        "en": "Orange",
+        "ar": "برتقالي"
+    },
+    "black": {
+        "en": "Black",
+        "ar": "أسود"
+    },
+    "white": {
+        "en": "White",
+        "ar": "أبيض"
+    },
+    "gray": {
+        "en": "Gray",
+        "ar": "رمادي"
+    },
+    "brown": {
+        "en": "Brown",
+        "ar": "بني"
+    },
+    "pink": {
+        "en": "Pink",
+        "ar": "زهري"
+    },
+    "gold": {
+        "en": "Gold",
+        "ar": "ذهبي"
+    },
+    "silver": {
+        "en": "Silver",
+        "ar": "فضي"
+    },
+    "beige": {
+        "en": "Beige",
+        "ar": "بيج"
+    },
+    "maroon": {
+        "en": "Maroon",
+        "ar": "كستنائي"
+    },
+    "violet": {
+        "en": "Violet",
+        "ar": "بنفسجي"
+    },
+    "turquoise": {
+        "en": "Turquoise",
+        "ar": "تركواز"
+    },
+    "navy": {
+        "en": "Navy",
+        "ar": "أزرق داكن"
+    },
+    "khaki": {
+        "en": "Khaki",
+        "ar": "خاكي"
+    },
+    "magenta": {
+        "en": "Magenta",
+        "ar": "ماغنتا"
+    },
+    "olive": {
+        "en": "Olive",
+        "ar": "زيتوني"
+    },
+    "teal": {
+        "en": "Teal",
+        "ar": "أزرق مخضر"
+    },
+    "coral": {
+        "en": "Coral",
+        "ar": "بحري"
+    },
+    "lime": {
+        "en": "Lime",
+        "ar": "ليموني"
+    },
+    "indigo": {
+        "en": "Indigo",
+        "ar": "نيلي"
+    },
+    "peach": {
+        "en": "Peach",
+        "ar": "مشمشي"
+    },
+    "lavender": {
+        "en": "Lavender",
+        "ar": "أرجواني فاتح"
+    },
+    "salmon": {
+        "en": "Salmon",
+        "ar": "سلموني"
+    },
+    "tan": {
+        "en": "Tan",
+        "ar": "بني فاتح"
+    },
+    "cyan": {
+        "en": "Cyan",
+        "ar": "سماوي"
+    },
+    "aqua": {
+        "en": "Aqua",
+        "ar": "أزرق مائي"
+    },
+    "fuchsia": {
+        "en": "Fuchsia",
+        "ar": "فوشيا"
+    },
+    "wheat": {
+        "en": "Wheat",
+        "ar": "قمحي"
+    },
+    "plum": {
+        "en": "Plum",
+        "ar": "أرجواني داكن"
+    },
+    "mint": {
+        "en": "Mint",
+        "ar": "أخضر مائي"
+    },
+    "rose": {
+        "en": "Rose",
+        "ar": "أحمر مائي"
+    },
+    "azure": {
+        "en": "Azure",
+        "ar": "أزرق فاتح"
+    },
+    "mustard": {
+        "en": "Mustard",
+        "ar": "أصفر داكن"
+    },
+    "copper": {
+        "en": "Copper",
+        "ar": "نحاسي"
+    },
+    "crimson": {
+        "en": "Crimson",
+        "ar": "أحمر داكن"
+    },
+    "ivory": {
+        "en": "Ivory",
+        "ar": "عنبري"
+    },
+    "lemon": {
+        "en": "Lemon",
+        "ar": "ليموني فاتح"
+    },
+    "lilac": {
+        "en": "Lilac",
+        "ar": "بنفسجي فاتح"
+    },
+    "mauve": {
+        "en": "Mauve",
+        "ar": "بنفسجي داكن"
+    },
+    "periwinkle": {
+        "en": "Periwinkle",
+        "ar": "أزرق فاتح"
+    },
+    "raspberry": {
+        "en": "Raspberry",
+        "ar": "توتي"
+    },
+    "tangerine": {
+        "en": "Tangerine",
+        "ar": "برتقالي فاتح"
+    },
+    "taupe": {
+        "en": "Taupe",
+        "ar": "بني فاتح"
+    },
+    "coffee": {
+        "en": "Coffee",
+        "ar": "بني داكن"
+    }
+}
