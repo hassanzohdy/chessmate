@@ -1,11 +1,11 @@
-export enum ChessGameState {
+export enum GameState {
   Waiting = "waiting",
   NotStarted = "notStarted",
   Started = "started",
   Ended = "ended",
 }
 
-export type ChessGameResult = "white" | "black" | "draw";
+export type GameResult = "white" | "black" | "draw";
 
 export enum PlayerColor {
   White = "white",
@@ -23,7 +23,7 @@ export enum SquareColumnPosition {
   H,
 }
 
-export enum ChessPieceName {
+export enum PieceName {
   Pawn = "pawn",
   Rook = "rook",
   Knight = "knight",
@@ -33,6 +33,11 @@ export enum ChessPieceName {
 }
 
 export enum SquareColor {
+  White = "white",
+  Black = "black",
+}
+
+export enum BishopColor {
   White = "white",
   Black = "black",
 }

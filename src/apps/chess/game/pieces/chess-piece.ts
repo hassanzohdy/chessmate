@@ -1,12 +1,12 @@
-import { ChessPlayer } from "apps/chess/game/chess-player";
-import { ChessSquare } from "./../chess-square";
-import { ChessPieceName } from "./../types";
+import { Player } from "apps/chess/game/chess-player";
+import { Square } from "./../chess-square";
+import { PieceName } from "./../types";
 
-export abstract class ChessPiece {
+export abstract class Piece {
   /**
    * Piece Name
    */
-  public abstract name: ChessPieceName;
+  public abstract name: PieceName;
 
   /**
    * Whether the piece is a promoted pawn
@@ -21,28 +21,18 @@ export abstract class ChessPiece {
   /**
    * Constructor
    */
-  public constructor(public player: ChessPlayer, public square: ChessSquare) {
+  public constructor(public player: Player, public square: Square) {
     //
     player.addPiece(this);
     square.piece = this;
   }
 
   /**
-   * Check if piece can move to the given square
-   */
-  public abstract canMoveTo(square: ChessSquare): boolean;
-
-  /**
    * Move piece to the given square
    */
-  public moveToSquare(square: ChessSquare) {
+  public moveToSquare(square: Square) {
     //
   }
-
-  /**
-   * List the available moves for the piece
-   */
-  public abstract listAvailableMoves(): ChessSquare[];
 
   /**
    * Take piece
@@ -50,4 +40,14 @@ export abstract class ChessPiece {
   public take() {
     //
   }
+
+  /**
+   * Check if piece can move to the given square
+   */
+  public abstract canMoveTo(square: Square): boolean;
+
+  /**
+   * List the available moves for the piece
+   */
+  public abstract listAvailableMoves(): Square[];
 }

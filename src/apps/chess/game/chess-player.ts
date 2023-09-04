@@ -1,8 +1,8 @@
 import { ChessBoard } from "apps/chess/game/chess-board";
-import { ChessPiece } from "./pieces";
+import { Piece } from "./pieces";
 import { PlayerColor } from "./types";
 
-export class ChessPlayer {
+export class Player {
   /**
    * Player Name
    */
@@ -21,12 +21,14 @@ export class ChessPlayer {
   /**
    * Current pieces with the player
    */
-  public pieces: ChessPiece[] = [];
+  public pieces: Piece[] = [];
 
   /**
-   * Taken Pieces
+   * Taken Pieces from the current player
+   *
+   * Pieces + TakenPieces = 16
    */
-  public takenPieces: ChessPiece[] = [];
+  public takenPieces: Piece[] = [];
 
   /**
    * Whether if the player is being checked
@@ -41,7 +43,7 @@ export class ChessPlayer {
   /**
    * Add piece
    */
-  public addPiece(piece: ChessPiece) {
+  public addPiece(piece: Piece) {
     this.pieces.push(piece);
 
     return this;

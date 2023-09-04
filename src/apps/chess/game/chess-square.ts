@@ -1,11 +1,11 @@
-import { ChessPiece } from "./pieces";
+import { Piece } from "./pieces";
 import { SquareColor, SquareColumnPosition } from "./types";
 
-export class ChessSquare {
+export class Square {
   /**
    * Current Piece
    */
-  public piece?: ChessPiece;
+  public piece?: Piece;
 
   /**
    * Square Color
