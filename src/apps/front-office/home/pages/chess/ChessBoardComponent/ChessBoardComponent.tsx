@@ -1,7 +1,8 @@
 import { useMemo } from "react";
 import { chessBoardAtom } from "../../../../../chess/atoms";
-import PieceComponent from "../Piece/Piece";
 import SquareComponent from "../SquareComponent";
+import ChessPromotionPopup from "./ChessPromotionPopup";
+import PiecesList from "./PiecesList";
 import StartGameButton from "./StartGameButton";
 
 function ColumnNames() {
@@ -64,20 +65,16 @@ export default function ChessBoardComponent() {
     });
   }, [chessBoard]);
 
-  const pieces = useMemo(() => {
-    return chessBoard.pieces.map((piece, index) => (
-      <PieceComponent piece={piece} key={index} />
-    ));
-  }, [chessBoard]);
-
   return (
     <>
       <div className="relative w-[600px] h-[600px] flex flex-wrap">
         <ColumnNames />
         {squares}
-        {pieces}
+        <PiecesList />
         <RowNumbers />
       </div>
+
+      <ChessPromotionPopup />
 
       <StartGameButton />
     </>

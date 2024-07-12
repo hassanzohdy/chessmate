@@ -1,3 +1,4 @@
+import events from "@mongez/events";
 import { Square } from "apps/chess/game/chess-square";
 import { PieceName } from "apps/chess/game/types";
 import { promotionSelectionAtom } from "../../atoms";
@@ -56,11 +57,11 @@ export class Pawn extends Piece {
       }
     }
 
-    if (this.isPromoting(square)) {
-      return this.promotePawn(square);
-    }
-
     this.moveTo(square);
+
+    if (this.isPromoting(square)) {
+      this.promotePawn(square);
+    }
   }
 
   protected isPromoting(nextSquare: Square): boolean {
@@ -78,12 +79,39 @@ export class Pawn extends Piece {
     });
 
     const event = promotionSelectionAtom.onChange(value => {
-      if (!value.promotedPiece) return;
+      if (!value.selectedPiece) return;
 
       event.unsubscribe();
 
       this.isPromoted = true;
+
+      const piece = this.board.createPiece(
+        value.selectedPiece,
+        this.player,
+        square,
+      );
+
+      square.setPiece(piece);
+
+      piece.square = square;
+
+      // now the piece is promoted, we need to replace the pawn with the promoted piece
+      const pieceIndex = this.player.pieces.indexOf(this);
+      // make sure to get the id first before swapping because it depends on the piece index in the player pieces list
+      const id = this.id;
+      // replace current pawn with the promoted piece
+      this.player.pieces[pieceIndex] = piece;
+
+      events.trigger(`chess.piece.promoted.${id}`, piece);
+
+      this.board.currentPlayer!.checkIfKingIsInCheck();
+
+      this.board.lastMovedPiece = piece;
     });
+  }
+
+  public onPromoted(callback: (piece: Piece) => void) {
+    return events.subscribe(`chess.piece.promoted.${this.id}`, callback);
   }
 
   public listAvailableMoves(): Square[] {

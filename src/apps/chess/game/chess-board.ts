@@ -8,6 +8,7 @@ import { Square } from "./chess-square";
 import {
   GameResult,
   GameState,
+  PieceName,
   PlayerColor,
   SquareColor,
   SquareColumnPosition,
@@ -17,7 +18,9 @@ export class ChessBoard {
   /**
    * Game State
    */
-  public state: GameState = GameState.Waiting;
+  // TODO: Change it to waiting later
+  // public state: GameState = GameState.Waiting;
+  public state: GameState = GameState.Active;
 
   /**
    * Game result
@@ -38,6 +41,13 @@ export class ChessBoard {
    * Current Player
    */
   public currentPlayer?: Player;
+
+  /**
+   * Other player
+   */
+  public otherPlayer(oppositePlayer = this.currentPlayer) {
+    return this.players.find(player => player !== oppositePlayer) as Player;
+  }
 
   /**
    * Squares List
@@ -233,7 +243,7 @@ export class ChessBoard {
         square.column = column as SquareColumnPosition;
         square.row = row;
         square.color =
-          (row + column) % 2 === 0 ? SquareColor.White : SquareColor.Black;
+          (row + column) % 2 === 1 ? SquareColor.White : SquareColor.Black;
 
         this.squares.push(square);
       }
@@ -255,6 +265,43 @@ export class ChessBoard {
   protected createPieces() {
     this.createWhitePeaces();
     this.createBlackPeaces();
+  }
+
+  public createPiece(pieceName: PieceName, player: Player, square: Square) {
+    switch (pieceName) {
+      case PieceName.Pawn:
+        return new Pawn(player, square);
+      case PieceName.Rook:
+        return new Rook(player, square);
+      case PieceName.Knight:
+        return new Knight(player, square);
+      case PieceName.Bishop:
+        return square.color === SquareColor.White
+          ? new WhiteBishop(player, square)
+          : new BlackBishop(player, square);
+      case PieceName.Queen:
+        return new Queen(player, square);
+      case PieceName.King:
+        return new King(player, square);
+    }
+  }
+
+  public onPiecesListChange(callback: (pieces: Piece[]) => void) {
+    return events.subscribe(`chess.board.pieces`, callback);
+  }
+
+  public triggerPiecesListChange() {
+    setTimeout(() => {
+      events.trigger(`chess.board.pieces`);
+    }, 300);
+  }
+
+  public removePiece(piece: Piece) {
+    const player = piece.player;
+
+    player.pieces = player.pieces.filter(p => p !== piece);
+
+    this.triggerPiecesListChange();
   }
 
   /**

@@ -1,6 +1,6 @@
 import { ChessBoard } from "apps/chess/game/chess-board";
-import { Piece } from "./pieces";
-import { PlayerColor } from "./types";
+import { King, Piece } from "./pieces";
+import { PieceName, PlayerColor } from "./types";
 
 export class Player {
   /**
@@ -33,7 +33,7 @@ export class Player {
   /**
    * Whether if the player is being checked
    */
-  public isChecked?: boolean;
+  public isChecked = false;
 
   /**
    * Check if player can castle
@@ -76,5 +76,45 @@ export class Player {
    */
   public get isWhite(): boolean {
     return this.color === PlayerColor.White;
+  }
+
+  /**
+   * Check if current player in check or not
+   */
+  public checkIfKingIsInCheck(): boolean {
+    // to do so, we need to check if the king is in the path of any of the opponent's pieces
+    const king = this.pieces.find(
+      piece => piece.name === PieceName.King,
+    ) as King;
+
+    const opponent = this.board.otherPlayer(this);
+
+    this.isChecked = opponent.pieces.some(piece =>
+      piece.canMoveTo(king.square),
+    );
+
+    if (this.isChecked) {
+      alert("Checked");
+
+      this.checkIfKingIsInCheckMate(king);
+    }
+
+    return this.isChecked;
+  }
+
+  /**
+   * Check if the king is in check mate
+   */
+  public checkIfKingIsInCheckMate(king: King) {
+    const opponent = this.board.otherPlayer(this);
+
+    const isKingInCheckMate = king
+      .listAvailableMoves()
+      .every(square => opponent.pieces.some(piece => piece.canMoveTo(square)));
+
+    if (isKingInCheckMate) {
+      this.isWinner = false;
+      alert("Mate");
+    }
   }
 }

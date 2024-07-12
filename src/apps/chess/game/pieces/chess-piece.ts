@@ -92,6 +92,8 @@ export abstract class Piece {
 
     events.trigger(`chess.piece.moved.${this.id}`, this);
 
+    this.board.otherPlayer(this.player).checkIfKingIsInCheck();
+
     this.board.changeTurn();
     playSound("move");
   }

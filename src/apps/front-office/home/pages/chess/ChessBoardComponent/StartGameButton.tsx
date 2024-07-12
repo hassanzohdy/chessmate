@@ -1,5 +1,5 @@
 import { GameState } from "@chess/game";
-import { useBoard, useGameState } from "../../../../../chess/hooks";
+import { useBoard, useGameState } from "@chess/hooks";
 
 export default function StartGameButton() {
   const gameState = useGameState();
