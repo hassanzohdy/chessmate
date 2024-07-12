@@ -36,9 +36,24 @@ export class Player {
   public isChecked?: boolean;
 
   /**
+   * Check if player can castle
+   */
+  public canCastle = {
+    kingSide: true,
+    queenSide: true,
+  };
+
+  /**
    * Player Board
    */
   public board!: ChessBoard;
+
+  /**
+   * Check if the current player is in turn
+   */
+  public get currentTurn() {
+    return this.board.currentPlayer === this;
+  }
 
   /**
    * Add piece
@@ -47,5 +62,19 @@ export class Player {
     this.pieces.push(piece);
 
     return this;
+  }
+
+  /**
+   * Check if current player is black
+   */
+  public get isBlack(): boolean {
+    return this.color === PlayerColor.Black;
+  }
+
+  /**
+   * Check if current player is white
+   */
+  public get isWhite(): boolean {
+    return this.color === PlayerColor.White;
   }
 }

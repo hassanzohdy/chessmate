@@ -1,8 +1,8 @@
 export enum GameState {
   Waiting = "waiting",
-  NotStarted = "notStarted",
-  Started = "started",
+  Active = "active",
   Ended = "ended",
+  Canceled = "canceled",
 }
 
 export type GameResult = "white" | "black" | "draw";
@@ -13,14 +13,14 @@ export enum PlayerColor {
 }
 
 export enum SquareColumnPosition {
-  A,
-  B,
-  C,
-  D,
-  E,
-  F,
-  G,
-  H,
+  A = 1,
+  B = 2,
+  C = 3,
+  D = 4,
+  E = 5,
+  F = 6,
+  G = 7,
+  H = 8,
 }
 
 export enum PieceName {

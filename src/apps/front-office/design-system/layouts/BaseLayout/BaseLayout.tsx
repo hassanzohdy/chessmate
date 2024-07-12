@@ -3,7 +3,7 @@ import Header from "../Header";
 
 export type BaseLayoutProps = {
   children: React.ReactNode;
-}
+};
 
 /**
  * Base layout can be used to wrap all pages

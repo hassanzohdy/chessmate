@@ -1,22 +1,49 @@
-import styled from "@emotion/styled";
-import { ChessBoard } from "apps/chess/game";
-import Piece from "apps/front-office/home/pages/chess/Piece/Piece";
-import Square from "apps/front-office/home/pages/chess/Square/Square";
-import { useMemo, useRef } from "react";
+import { useMemo } from "react";
+import { chessBoardAtom } from "../../../../../chess/atoms";
+import PieceComponent from "../Piece/Piece";
+import SquareComponent from "../SquareComponent";
+import StartGameButton from "./StartGameButton";
 
-export const Board = styled.div`
-  label: ChessBoard;
-  position: relative;
-  width: 600px;
-  height: 600px;
-  display: flex;
-  flex-wrap: wrap;
-`;
+function ColumnNames() {
+  return (
+    <div
+      className="absolute -bottom-6 left-0 z-10 w-full flex justify-between"
+      style={{
+        textShadow: "1px 1px 1px #000",
+      }}>
+      <div className="w-[12.5%]">A</div>
+      <div className="w-[12.5%]">B</div>
+      <div className="w-[12.5%]">C</div>
+      <div className="w-[12.5%]">D</div>
+      <div className="w-[12.5%]">E</div>
+      <div className="w-[12.5%]">F</div>
+      <div className="w-[12.5%]">G</div>
+      <div className="w-[12.5%]">H</div>
+    </div>
+  );
+}
+
+function RowNumbers() {
+  return (
+    <div
+      className="absolute top-5 -left-10 w-[50px] h-full flex flex-col justify-between"
+      style={{
+        textShadow: "1px 1px 1px #000",
+      }}>
+      <div className="h-[12.5%] text-center">8</div>
+      <div className="h-[12.5%] text-center">7</div>
+      <div className="h-[12.5%] text-center">6</div>
+      <div className="h-[12.5%] text-center">5</div>
+      <div className="h-[12.5%] text-center">4</div>
+      <div className="h-[12.5%] text-center">3</div>
+      <div className="h-[12.5%] text-center">2</div>
+      <div className="h-[12.5%] text-center">1</div>
+    </div>
+  );
+}
 
 export default function ChessBoardComponent() {
-  const chessBoardRef = useRef(new ChessBoard());
-
-  const chessBoard = chessBoardRef.current;
+  const chessBoard = chessBoardAtom.value;
 
   const squares = useMemo(() => {
     // create the squares
@@ -28,21 +55,31 @@ export default function ChessBoardComponent() {
 
     return squares.map(square => {
       return (
-        <Square color={square.color} key={`${square.column}${square.row}`}>
-          {square.piece && (
-            <Piece
-              piece={square.piece.name}
-              color={square.piece.player.color}
-            />
-          )}
-        </Square>
+        <SquareComponent
+          square={square}
+          color={square.color}
+          key={`${square.column}${square.row}`}
+        />
       );
     });
   }, [chessBoard]);
 
+  const pieces = useMemo(() => {
+    return chessBoard.pieces.map((piece, index) => (
+      <PieceComponent piece={piece} key={index} />
+    ));
+  }, [chessBoard]);
+
   return (
     <>
-      <Board>{squares}</Board>
+      <div className="relative w-[600px] h-[600px] flex flex-wrap">
+        <ColumnNames />
+        {squares}
+        {pieces}
+        <RowNumbers />
+      </div>
+
+      <StartGameButton />
     </>
   );
 }

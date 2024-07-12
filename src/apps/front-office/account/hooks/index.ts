@@ -1,4 +1,3 @@
-import { trans } from "@mongez/localization";
 import { FormInterface } from "@mongez/react-form";
 import router, {
   navigateBack,
@@ -6,6 +5,7 @@ import router, {
   refresh,
 } from "@mongez/react-router";
 import URLS from "apps/front-office/utils/urls";
+import React from "react";
 import { resetPasswordAtom } from "../atoms";
 import {
   forgetPassword,
@@ -16,7 +16,6 @@ import {
   verifyForgetPassword,
 } from "../service/auth";
 import user from "../user";
-import React from "react";
 
 const goBack = () => {
   setTimeout(() => {

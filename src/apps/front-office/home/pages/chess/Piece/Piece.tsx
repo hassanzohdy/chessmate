@@ -1,5 +1,7 @@
-// Import styled from emotion
-import styled from "@emotion/styled";
+import { Piece } from "@chess/game";
+import { useEvent } from "@mongez/react-hooks";
+import { useCallback, useState } from "react";
+import { useBoard } from "../../../../../chess/hooks";
 
 const pieceImages = {
   white: {
@@ -29,18 +31,72 @@ const pieceImages = {
 export type PieceType = keyof typeof pieceImages.black;
 
 export type PieceProps = {
-  piece: PieceType;
-  color: "white" | "black";
+  piece: Piece;
 };
 
-export const PieceImage = styled.img`
-  label: PieceImage;
-  width: 90%;
-  margin: auto;
-  cursor: pointer;
-`;
+export default function PieceComponent({ piece }: PieceProps) {
+  const pieceImage = pieceImages[piece.player.color][piece.name];
 
-export default function Piece({ color, piece }: PieceProps) {
-  const pieceImage = pieceImages[color][piece];
-  return <PieceImage src={pieceImage} alt={piece} />;
+  const board = useBoard();
+
+  const whiteStartsAtBottom = true;
+
+  const calculatePosition = useCallback(() => {
+    const row = piece.square.row;
+    const column = piece.square.column;
+    const top = whiteStartsAtBottom
+      ? `${(8 - row) * 12.5}%`
+      : `${(row - 1) * 12.5}%`;
+    const left = `${(column - 1) * 12.5}%`;
+    return { top, left };
+  }, [piece.square, whiteStartsAtBottom]);
+
+  const [position, setPosition] = useState(calculatePosition());
+  const [isTaken, setIsTaken] = useState(piece.isTaken);
+
+  useEvent(() =>
+    piece.onMove(() => {
+      setPosition(calculatePosition());
+    }),
+  );
+
+  useEvent(() =>
+    piece.onTaken(p => {
+      setTimeout(() => {
+        setIsTaken(true);
+      }, 100);
+    }),
+  );
+
+  const detectAvailableMoves = () => {
+    if (!board.isStarted) return;
+
+    if (!piece?.player?.currentTurn) {
+      board.clearHighlightedSquares();
+      board.clearSelectedPiece();
+
+      return;
+    }
+
+    board.setHighlightedSquares(piece.listAvailableMoves());
+
+    board.setSelectPiece(piece);
+  };
+
+  console.log("Rendering", piece.name, piece.player.color, piece.id);
+
+  if (isTaken) return null;
+
+  return (
+    <img
+      onClick={detectAvailableMoves}
+      src={pieceImage}
+      alt={piece.name}
+      className="absolute cursor-pointer w-[12.5%] h-[12.5%]"
+      style={{
+        transition: "all 0.2s ease-in-out",
+        ...position,
+      }}
+    />
+  );
 }

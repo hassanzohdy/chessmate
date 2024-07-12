@@ -5,12 +5,6 @@ import svgr from "vite-plugin-svgr";
 
 // https://vitejs.dev/config/
 export default defineConfig(() => ({
-  plugins: [
-    svgr({
-      exportAsDefault: false,
-    }),
-    mongezVite(),
-    react(),
-  ],
+  plugins: [mongezVite(), svgr(), react()],
   envPrefix: "APP_",
 }));

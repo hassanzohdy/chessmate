@@ -1,4 +1,5 @@
-import { King, Pawn, Queen, Rook } from "apps/chess/game/pieces";
+import events from "@mongez/events";
+import { King, Pawn, Piece, Queen, Rook } from "apps/chess/game/pieces";
 import { BlackBishop } from "apps/chess/game/pieces/black-bishop";
 import { Knight } from "apps/chess/game/pieces/knight-piece";
 import { WhiteBishop } from "apps/chess/game/pieces/white-bishop";
@@ -49,6 +50,21 @@ export class ChessBoard {
   public theme = "default";
 
   /**
+   * Highlighted Squares
+   */
+  public highlightedSquares: Square[] = [];
+
+  /**
+   * Current selected piece
+   */
+  public selectedPiece?: Piece;
+
+  /**
+   * Last moved piece
+   */
+  public lastMovedPiece?: Piece;
+
+  /**
    * Constructor
    */
   public constructor() {
@@ -72,6 +88,62 @@ export class ChessBoard {
   }
 
   /**
+   * Set highlighted squares
+   */
+  public setHighlightedSquares(squares: Square[]) {
+    this.highlightedSquares = squares;
+
+    events.trigger(`chess.board.highlightedSquares`, squares);
+  }
+
+  /**
+   * Listen to highlighted squares change
+   */
+  public onHighlightedSquaresChange(callback: (squares: Square[]) => void) {
+    return events.subscribe(`chess.board.highlightedSquares`, callback);
+  }
+
+  /**
+   * Clear highlighted squares
+   */
+  public clearHighlightedSquares() {
+    for (const square of this.highlightedSquares) {
+      square.isHighlighted = false;
+    }
+    this.setHighlightedSquares([]);
+  }
+
+  /**
+   * Set selected piece
+   */
+  public setSelectPiece(piece: Piece) {
+    piece.isSelected = true;
+    this.selectedPiece = piece;
+
+    events.trigger(`chess.board.selectedPiece`, piece);
+  }
+
+  /**
+   * Clear selected piece
+   */
+  public clearSelectedPiece() {
+    if (this.selectedPiece) {
+      this.selectedPiece.isSelected = false;
+    }
+
+    this.selectedPiece = undefined;
+
+    events.trigger(`chess.board.selectedPiece`, undefined);
+  }
+
+  /**
+   * Listen to selected piece change
+   */
+  public onSelectedPieceChange(callback: (piece: Piece | undefined) => void) {
+    return events.subscribe(`chess.board.selectedPiece`, callback);
+  }
+
+  /**
    * Start game
    */
   public start() {
@@ -79,7 +151,7 @@ export class ChessBoard {
       throw new Error("Invalid number of players");
     }
 
-    this.changeState(GameState.Started);
+    this.changeState(GameState.Active);
 
     return this;
   }
@@ -91,6 +163,35 @@ export class ChessBoard {
     this.state = state;
 
     // trigger event for state change
+    events.trigger(`chess.state.update`, state);
+    return this;
+  }
+
+  /**
+   * Check if game is started
+   */
+  public get isStarted(): boolean {
+    return this.state === GameState.Active;
+  }
+
+  public onGameStateChange(callback: (state: GameState) => void) {
+    return events.subscribe(`chess.state.update`, callback);
+  }
+
+  /**
+   * Change current player turn
+   */
+  public changeTurn() {
+    if (!this.currentPlayer) return;
+
+    const currentPlayerIndex = this.players.indexOf(this.currentPlayer);
+
+    const nextPlayerIndex = currentPlayerIndex + 1;
+
+    const nextPlayer = this.players[nextPlayerIndex % 2];
+
+    this.currentPlayer = nextPlayer;
+
     return this;
   }
 
@@ -124,7 +225,6 @@ export class ChessBoard {
    * Create squares
    */
   protected createSquares() {
-    //
     for (let row = 1; row <= 8; row++) {
       // loop over columns
       for (let column = 1; column <= 8; column++) {
@@ -133,7 +233,7 @@ export class ChessBoard {
         square.column = column as SquareColumnPosition;
         square.row = row;
         square.color =
-          (row + column - 1) % 2 === 0 ? SquareColor.White : SquareColor.Black;
+          (row + column) % 2 === 0 ? SquareColor.White : SquareColor.Black;
 
         this.squares.push(square);
       }
@@ -145,7 +245,7 @@ export class ChessBoard {
    */
   public getSquare(row: number, column: SquareColumnPosition) {
     return this.squares.find(
-      square => square.row === row && square.column === column + 1,
+      square => square.row === row && square.column === column,
     ) as Square;
   }
 
@@ -153,8 +253,8 @@ export class ChessBoard {
    * Create pieces
    */
   protected createPieces() {
-    this.createBlackPeaces();
     this.createWhitePeaces();
+    this.createBlackPeaces();
   }
 
   /**
@@ -199,7 +299,7 @@ export class ChessBoard {
 
     // create pawns
     for (let i = 1; i <= 8; i++) {
-      const square = this.getSquare(2, (i as SquareColumnPosition) - 1);
+      const square = this.getSquare(2, i as SquareColumnPosition);
 
       new Pawn(whitePlayer, square);
     }
@@ -247,7 +347,7 @@ export class ChessBoard {
 
     // create pawns
     for (let i = 1; i <= 8; i++) {
-      const square = this.getSquare(7, (i as SquareColumnPosition) - 1);
+      const square = this.getSquare(7, i as SquareColumnPosition);
 
       new Pawn(blackPlayer, square);
     }
@@ -258,6 +358,15 @@ export class ChessBoard {
    */
   public getPlayerByColor(color: PlayerColor) {
     return this.players.find(player => player.color === color) as Player;
+  }
+
+  /**
+   * Get all pieces
+   */
+  public get pieces() {
+    return this.players.reduce((pieces, player) => {
+      return pieces.concat(player.pieces);
+    }, [] as Piece[]);
   }
 
   /**
