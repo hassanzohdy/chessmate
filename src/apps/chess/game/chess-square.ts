@@ -29,6 +29,16 @@ export class Square {
   public isHighlighted = false;
 
   /**
+   * Square id
+   */
+  public id!: string;
+
+  /**
+   * Square name
+   */
+  public name!: string;
+
+  /**
    * Highlight the square
    */
   public highlight(highlight = true): void {
@@ -38,6 +48,28 @@ export class Square {
       `chess.square.${this.row}.${this.column}.highlight`,
       highlight,
     );
+  }
+
+  /**
+   * Set square position and color
+   */
+  public setPositionAndColor(row: number, column: SquareColumnPosition) {
+    this.column = column as SquareColumnPosition;
+    this.row = row;
+    this.color =
+      (row + column) % 2 === 1 ? SquareColor.White : SquareColor.Black;
+
+    this.id = `sqr-${this.row}-${this.column}`;
+
+    // popular square name i.e G6
+    this.name = `${SquareColumnPosition[this.column]}${this.row}`;
+  }
+
+  /**
+   * Get square html element
+   */
+  public get element(): HTMLDivElement {
+    return document.getElementById(this.id) as HTMLDivElement;
   }
 
   /**

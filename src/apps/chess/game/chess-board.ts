@@ -240,14 +240,21 @@ export class ChessBoard {
       for (let column = 1; column <= 8; column++) {
         const square = new Square();
 
-        square.column = column as SquareColumnPosition;
-        square.row = row;
-        square.color =
-          (row + column) % 2 === 1 ? SquareColor.White : SquareColor.Black;
+        square.setPositionAndColor(row, column as SquareColumnPosition);
 
         this.squares.push(square);
       }
     }
+  }
+
+  /**
+   * Get player at the bottom, which usually refers to the current user regardless of the color
+   */
+  public get playerAtTheBottom(): Player {
+    // for now we will assume the white player is the current user
+    return this.players.find(
+      player => player.color === PlayerColor.White,
+    ) as Player;
   }
 
   /**

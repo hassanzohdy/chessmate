@@ -1,5 +1,12 @@
 import { Square } from "@chess/game/chess-square";
-import { useBoard, useIsHighlightedSquare, useSquarePiece } from "@chess/hooks";
+import {
+  useBoard,
+  useCircleHighlightSquare,
+  useHighlightedSquare,
+  useIsPointingToSquare,
+  useOnSquareClick,
+  useSquarePiece,
+} from "@chess/hooks";
 
 export type SquareProps = {
   color: "white" | "black";
@@ -14,8 +21,11 @@ const backgroundColor = {
 export default function SquareComponent({ color, square }: SquareProps) {
   const bgColor = backgroundColor[color];
   const board = useBoard();
-  const isHighlighted = useIsHighlightedSquare(square);
+  const isPointingToSquare = useIsPointingToSquare(square);
   const piece = useSquarePiece(square);
+  useOnSquareClick(square);
+  const isHighlightedFromRightClick = useCircleHighlightSquare(square);
+  const highlightedColor = useHighlightedSquare(square);
 
   const detectAvailableMoves = () => {
     if (!board.isStarted) return;
@@ -52,10 +62,35 @@ export default function SquareComponent({ color, square }: SquareProps) {
   return (
     <div
       role="button"
+      id={square.id}
       onClick={detectAvailableMoves}
       className={`w-[12.5%] h-[12.5%] cursor-pointer relative flex`}
       style={{ backgroundColor: bgColor }}>
-      {isHighlighted &&
+      {highlightedColor && (
+        // add a full background color that covers the square
+        <div
+          className="absolute inset-0 bg-opacity-50"
+          style={{
+            backgroundColor: highlightedColor,
+          }}
+        />
+      )}
+      {isHighlightedFromRightClick && (
+        // display a green circle when right click on a square like the one on li chess
+        <div
+          className="absolute inset-0 flex justify-center items-center"
+          style={{ zIndex: 1 }}>
+          <div
+            className="w-full h-full border-4 rounded-full"
+            style={{
+              borderColor: square.piece?.player?.isOpponent
+                ? "#d127d1"
+                : "#95d61f",
+            }}
+          />
+        </div>
+      )}
+      {isPointingToSquare &&
         (square.piece ? (
           <div
             className="absolute inset-0 flex justify-center items-center"

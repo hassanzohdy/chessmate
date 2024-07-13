@@ -117,6 +117,13 @@ export class Player {
   }
 
   /**
+   * Check if current player is the opponent of current user
+   */
+  public get isOpponent(): boolean {
+    return this !== this.board.playerAtTheBottom;
+  }
+
+  /**
    * Check if current player in check or not
    */
   public checkIfKingIsInCheck(): boolean {

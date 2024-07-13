@@ -3,6 +3,10 @@ import { pieceImages } from "@chess/helpers/pieces-images";
 import { useBoard } from "@chess/hooks";
 import { useEvent } from "@mongez/react-hooks";
 import { useEffect, useState } from "react";
+import {
+  highlightedSquaresAtom,
+  rightClickHighlightedSquaresAtom,
+} from "../../../../../chess/atoms";
 
 export type PieceType = keyof typeof pieceImages.black;
 
@@ -47,6 +51,41 @@ export default function PieceComponent({ piece: incomingPiece }: PieceProps) {
   );
 
   useEffect(() => {
+    // we need to handle the left and right click
+    // on right click, toggle square highlight
+    const pieceElement = document.getElementById(piece.id);
+
+    if (!pieceElement) return;
+
+    const rightClickCallback = e => {
+      e.preventDefault();
+
+      rightClickHighlightedSquaresAtom.toggleSquare(piece.square);
+    };
+
+    pieceElement.addEventListener("contextmenu", rightClickCallback);
+
+    const leftClickCallback = () => {
+      rightClickHighlightedSquaresAtom.clearAll();
+
+      // if current piece belongs to current
+
+      if (board.playerAtTheBottom.pieces.includes(piece)) {
+        highlightedSquaresAtom.toggleSelectedPieceSquare(piece.square);
+      } else {
+        highlightedSquaresAtom.toggleOpponentSelectedPieceSquare(piece.square);
+      }
+    };
+
+    pieceElement.addEventListener("click", leftClickCallback);
+
+    return () => {
+      pieceElement.removeEventListener("contextmenu", rightClickCallback);
+      pieceElement.removeEventListener("click", leftClickCallback);
+    };
+  }, [piece]);
+
+  useEffect(() => {
     if (incomingPiece instanceof Pawn === false) return;
 
     incomingPiece.onPromoted(piece => {
@@ -89,6 +128,7 @@ export default function PieceComponent({ piece: incomingPiece }: PieceProps) {
       onClick={detectAvailableMoves}
       src={pieceImage}
       alt={piece.name}
+      id={piece.id}
       className="absolute cursor-pointer w-[12.5%] h-[12.5%]"
       style={{
         transition: "all 0.2s ease-in-out",
