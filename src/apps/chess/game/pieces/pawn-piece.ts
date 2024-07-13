@@ -2,6 +2,12 @@ import events from "@mongez/events";
 import { Square } from "apps/chess/game/chess-square";
 import { PieceName } from "apps/chess/game/types";
 import { promotionSelectionAtom } from "../../atoms";
+import {
+  getBottomLeftDiaSquare,
+  getBottomRightSquare,
+  getTopLeftSquare,
+  getTopRightSquare,
+} from "../../helpers/moves/get-square";
 import { Piece } from "./chess-piece";
 
 export class Pawn extends Piece {
@@ -104,7 +110,7 @@ export class Pawn extends Piece {
 
       events.trigger(`chess.piece.promoted.${id}`, piece);
 
-      this.board.currentPlayer!.checkIfKingIsInCheck();
+      this.board.otherPlayer(this.player).checkIfKingIsInCheck();
 
       this.board.lastMovedPiece = piece;
     });
@@ -223,8 +229,27 @@ export class Pawn extends Piece {
 
     return availableSquares.filter(square => {
       // we need to make sure that square does not have a piece of current player
-      return square.piece?.player !== this.player;
+      if (square.piece?.player === this.player) return false;
+
+      return this.canProtectedTheKingInSquare(square);
     });
+  }
+
+  /**
+   * Check if current pawn can attack the king for the given square
+   */
+  public canAttackKingIn(square: Square) {
+    // first we need to check if the pawn is just one step from that square
+    // then we need to check if the square is diagonally
+    // so the checks will be top right and top left squares
+    const topRightSquare = this.player.isWhite
+      ? getTopRightSquare(this.square)
+      : getBottomRightSquare(this.square);
+    const topLeftSquare = this.player.isWhite
+      ? getTopLeftSquare(this.square)
+      : getBottomLeftDiaSquare(this.square);
+
+    return topRightSquare === square || topLeftSquare === square;
   }
 
   /**
@@ -327,7 +352,9 @@ export class Pawn extends Piece {
 
     return availableSquares.filter(square => {
       // we need to make sure that square does not have a piece of current player
-      return square.piece?.player !== this.player;
+      if (square.piece?.player === this.player) return false;
+
+      return this.canProtectedTheKingInSquare(square);
     });
   }
 

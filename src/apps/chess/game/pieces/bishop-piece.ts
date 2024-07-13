@@ -15,6 +15,8 @@ export class Bishop extends Piece {
   public color!: BishopColor;
 
   public listAvailableMoves(): Square[] {
-    return getDiagonalSquares(this.square, this.player);
+    return getDiagonalSquares(this.square, this.player).filter(square => {
+      return this.canProtectedTheKingInSquare(square);
+    });
   }
 }

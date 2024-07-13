@@ -52,15 +52,14 @@ export default function PieceComponent({ piece: incomingPiece }: PieceProps) {
     incomingPiece.onPromoted(piece => {
       setPiece(piece);
 
-      setTimeout(() => {
-        setPosition(calculatePosition(piece, whiteStartsAtBottom));
-      }, 10);
+      setPosition(calculatePosition(piece, whiteStartsAtBottom));
     });
   }, [incomingPiece, whiteStartsAtBottom]);
 
   useEvent(
     () =>
-      piece.onTaken(p => {
+      piece.onTaken(() => {
+        // time out here is for the animation to take place
         setTimeout(() => {
           setIsTaken(true);
         }, 100);

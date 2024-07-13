@@ -108,8 +108,8 @@ export abstract class Piece {
   /**
    * Check if piece can move to the given square
    */
-  public canMoveTo(square: Square): boolean {
-    if (!this.player.currentTurn) return false;
+  public canMoveTo(square: Square, ignoreCurrentTurn = false): boolean {
+    if (!this.player.currentTurn && !ignoreCurrentTurn) return false;
 
     const availableSquares = this.listAvailableMoves();
 
@@ -122,11 +122,68 @@ export abstract class Piece {
   public abstract listAvailableMoves(): Square[];
 
   /**
+   * Check if the piece can protected the king if under attack either by covering or attacking the attacking piece
+   * Please note that this method should be called only when filtering the available moves
+   */
+  protected canProtectedTheKingInSquare(square: Square) {
+    const squaresBetweenPieceAndKing =
+      !this.player.isChecked || this.player.numberOfChecks > 1
+        ? []
+        : this.player.getSquaresBetweenKingAndAttackingPiece(
+            this.player.checkedBy[0],
+          );
+
+    // now we need to check if current player's king is checked
+    if (this.player.isChecked === false) return true;
+
+    // before we check that, if the king is checked by more than oe piece,
+    // the king must move thus the pawn can not move
+    if (this.player.numberOfChecks > 1) return false;
+
+    // now if the king is checked, we need to make sure that the pawn can move to a square that can protect the king
+    // otherwise, we need to make sure that the pawn can attack the piece that is attacking the king
+
+    const piece = this.player.checkedBy[0];
+
+    // first case, the pawn can capture the attacking piece
+    if (piece.square === square) return true;
+
+    // if the piece is knight and can not be captured, it can not be blocked
+    if (piece.name === PieceName.Knight) return false;
+
+    console.log(piece, squaresBetweenPieceAndKing);
+
+    // now we eed to check if the pawn can block the attacking piece
+    return squaresBetweenPieceAndKing.includes(square);
+  }
+
+  /**
    * Capture the given piece
    */
   public capture(piece: Piece) {
     piece.taken(this);
     playSound("capture");
+  }
+
+  /**
+   * Check if there is any piece protecting this piece
+   */
+  public get isProtectedByAnotherPiece(): boolean {
+    // Until the check is done, make sure the square of the current piece has no piece
+    this.square.piece = undefined;
+
+    for (const piece of this.player.activePieces) {
+      if (piece === this) continue;
+
+      if (piece.canMoveTo(this.square, true)) {
+        this.square.piece = this;
+        return true;
+      }
+    }
+
+    this.square.piece = this;
+
+    return false;
   }
 
   /**

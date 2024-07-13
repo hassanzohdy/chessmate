@@ -3,6 +3,7 @@ import { getDiagonalSquares } from "../../helpers/moves/get-diagonal-squares";
 import { getStraightSquares } from "../../helpers/moves/get-straight-squares";
 import { PieceName, SquareColumnPosition } from "./../types";
 import { Piece } from "./chess-piece";
+import { Pawn } from "./pawn-piece";
 
 export class King extends Piece {
   /**
@@ -55,32 +56,137 @@ export class King extends Piece {
       getDiagonalSquares(this.square, this.player, true),
     );
 
-    if (this.player.canCastle.kingSide && this.canCastleToKingSide()) {
-      // get G1 square
-      const squareG1 = this.board.getSquare(
-        this.square.row,
-        SquareColumnPosition.G,
-      );
+    if (this.canCastle()) {
+      if (this.player.canCastle.kingSide && this.canCastleToKingSide()) {
+        // get G square
+        const squareG = this.board.getSquare(
+          this.square.row,
+          SquareColumnPosition.G,
+        );
 
-      squares.push(squareG1);
+        // make sure that the F square is not attacked by the opponent
+        if (
+          !this.opponentCanAttack(
+            this.board.getSquare(this.square.row, SquareColumnPosition.F),
+          )
+        ) {
+          squares.push(squareG);
+        }
+      }
+
+      if (this.player.canCastle.queenSide && this.canCastleToQueenSide()) {
+        // get C square
+        const squareC = this.board.getSquare(
+          this.square.row,
+          SquareColumnPosition.C,
+        );
+
+        if (
+          !this.opponentCanAttack(
+            this.board.getSquare(this.square.row, SquareColumnPosition.D),
+          )
+        ) {
+          squares.push(squareC);
+        }
+      }
     }
 
-    if (this.player.canCastle.queenSide && this.canCastleToQueenSide()) {
-      // get C1 square
-      const squareC1 = this.board.getSquare(
-        this.square.row,
-        SquareColumnPosition.C,
+    return squares.filter(square => {
+      return (
+        !this.opponentCanAttack(square) &&
+        !this.checkIfOtherKingIsCorrespondingCurrentKing(square) &&
+        !this.squareHasProtectedPiece(square)
       );
+    });
+  }
 
-      squares.push(squareC1);
+  protected checkIfOtherKingIsCorrespondingCurrentKing(
+    square: Square,
+  ): boolean {
+    const otherKing = this.board.otherPlayer(this.player).king;
+
+    // Check if they are on same column
+    // if that so, then check if there is only one row between them
+    if (
+      otherKing.square.column === this.square.column &&
+      Math.abs(otherKing.square.row - square.row) === 1
+    ) {
+      return true;
     }
 
-    return squares;
+    // now check if they are on same row
+    // if that so, then check if there is only one column between them
+    return (
+      otherKing.square.row === this.square.row &&
+      Math.abs(otherKing.square.column - square.column) === 1
+    );
+  }
+
+  protected squareHasProtectedPiece(square: Square): boolean {
+    // we need to check if that square the king is moving to is protected by another piece from the opponent
+    if (!square.piece) return false;
+
+    return square.piece.isProtectedByAnotherPiece;
+  }
+
+  protected canCastle(): boolean {
+    // if king is moved, no castling
+    if (this.isMoved) return false;
+
+    // if king is checked, no castling
+    if (this.player.isChecked) return false;
+
+    return true;
+  }
+
+  protected opponentCanAttack(square: Square): boolean {
+    const opponent = this.board.otherPlayer(this.player);
+
+    return opponent.activePiecesExceptKing.some(piece => {
+      // another check for the pawn, because it attacks diagonally
+      if (piece instanceof Pawn) {
+        return piece.canAttackKingIn(square);
+      }
+
+      return piece.canMoveTo(square, true);
+    });
+  }
+
+  protected canCastleToKingSide(): boolean {
+    // get F1/8, G1/8, h1/8 squares
+    const squareF1 = this.board.getSquare(
+      this.square.row,
+      SquareColumnPosition.F,
+    );
+
+    if (squareF1.piece) return false;
+
+    // get G1/8 square
+    const squareG = this.board.getSquare(
+      this.square.row,
+      SquareColumnPosition.G,
+    );
+
+    if (squareG.piece) return false;
+
+    // now the H1/8 must have the rook and it must not be moved yet
+    const squareH = this.board.getSquare(
+      this.square.row,
+      SquareColumnPosition.H,
+    );
+
+    if (
+      !squareH.piece ||
+      (squareH.piece.name !== PieceName.Rook &&
+        squareH.piece.player === this.player) ||
+      squareH.piece.isMoved
+    )
+      return false;
+
+    return true;
   }
 
   protected canCastleToQueenSide() {
-    if (this.isMoved) return false;
-
     const squareD = this.board.getSquare(
       this.square.row,
       SquareColumnPosition.D,
@@ -112,42 +218,6 @@ export class King extends Piece {
       (squareA.piece.name !== PieceName.Rook &&
         squareA.piece.player === this.player) ||
       squareA.piece.isMoved
-    )
-      return false;
-
-    return true;
-  }
-
-  protected canCastleToKingSide(): boolean {
-    if (this.isMoved) return false;
-
-    // get F1/8, G1/8, h1/8 squares
-    const squareF1 = this.board.getSquare(
-      this.square.row,
-      SquareColumnPosition.F,
-    );
-
-    if (squareF1.piece) return false;
-
-    // get G1/8 square
-    const squareG1 = this.board.getSquare(
-      this.square.row,
-      SquareColumnPosition.G,
-    );
-
-    if (squareG1.piece) return false;
-
-    // now the H1/8 must have the rook and it must not be moved yet
-    const squareH1 = this.board.getSquare(
-      this.square.row,
-      SquareColumnPosition.H,
-    );
-
-    if (
-      !squareH1.piece ||
-      (squareH1.piece.name !== PieceName.Rook &&
-        squareH1.piece.player === this.player) ||
-      squareH1.piece.isMoved
     )
       return false;
 

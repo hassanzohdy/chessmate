@@ -53,7 +53,7 @@ export class Knight extends Piece {
         if (square.piece.player === this.player) return false;
       }
 
-      return true;
+      return this.canProtectedTheKingInSquare(square);
     });
   }
 
@@ -99,7 +99,7 @@ export class Knight extends Piece {
         if (square.piece.player === this.player) return false;
       }
 
-      return true;
+      return this.canProtectedTheKingInSquare(square);
     });
   }
 }

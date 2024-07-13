@@ -1,4 +1,7 @@
 import { ChessBoard } from "apps/chess/game/chess-board";
+import { getDiagonalSquaresBetween } from "../helpers/moves/get-diagonal-squares-between";
+import { getStraightSquaresBetween } from "../helpers/moves/get-straight-squares-between";
+import { Square } from "./chess-square";
 import { King, Piece } from "./pieces";
 import { PieceName, PlayerColor } from "./types";
 
@@ -36,6 +39,18 @@ export class Player {
   public isChecked = false;
 
   /**
+   * List of pieces that made the check
+   */
+  public checkedBy: Piece[] = [];
+
+  /**
+   * Get number of checked pieces
+   */
+  public get numberOfChecks(): number {
+    return this.checkedBy.length;
+  }
+
+  /**
    * Check if player can castle
    */
   public canCastle = {
@@ -47,6 +62,11 @@ export class Player {
    * Player Board
    */
   public board!: ChessBoard;
+
+  /**
+   * King piece
+   */
+  protected _king!: King;
 
   /**
    * Check if the current player is in turn
@@ -79,33 +99,81 @@ export class Player {
   }
 
   /**
+   * Get squares between the king if it is checked and the attacking piece
+   */
+  public getSquaresBetweenKingAndAttackingPiece(
+    attackingPiece: Piece,
+  ): Square[] {
+    if (!this.isChecked) return [];
+
+    // if the piece is queen or bishop, check for diagonal squares
+    if ([PieceName.Queen, PieceName.Bishop].includes(attackingPiece.name)) {
+      return getDiagonalSquaresBetween(this.king.square, attackingPiece.square);
+    }
+
+    // if the piece is rook or queen, check for horizontal and vertical squares
+
+    return getStraightSquaresBetween(this.king.square, attackingPiece.square);
+  }
+
+  /**
    * Check if current player in check or not
    */
   public checkIfKingIsInCheck(): boolean {
     // to do so, we need to check if the king is in the path of any of the opponent's pieces
-    const king = this.pieces.find(
-      piece => piece.name === PieceName.King,
-    ) as King;
 
     const opponent = this.board.otherPlayer(this);
 
-    this.isChecked = opponent.pieces.some(piece =>
-      piece.canMoveTo(king.square),
-    );
+    this.checkedBy = [];
+
+    for (const piece of opponent.activePiecesExceptKing) {
+      if (piece.canMoveTo(this.king.square, true)) {
+        this.checkedBy.push(piece);
+      }
+    }
+
+    this.isChecked = this.checkedBy.length > 0;
 
     if (this.isChecked) {
       alert("Checked");
 
-      this.checkIfKingIsInCheckMate(king);
+      this.checkIfKingIsInCheckMate(this.king);
     }
 
     return this.isChecked;
   }
 
   /**
+   * Get active pieces on board
+   */
+  public get activePieces() {
+    return this.pieces.filter(piece => !piece.isTaken);
+  }
+
+  /**
+   * Get all active pieces except the king
+   */
+  public get activePiecesExceptKing() {
+    return this.activePieces.filter(piece => piece.name !== PieceName.King);
+  }
+
+  /**
+   * Get king piece
+   */
+  public get king(): King {
+    if (this._king) return this._king;
+
+    return (this._king = this.activePieces.find(
+      piece => piece.name === PieceName.King,
+    ) as King);
+  }
+
+  /**
    * Check if the king is in check mate
    */
   public checkIfKingIsInCheckMate(king: King) {
+    // TODO: check if any piece can protect the king
+    return;
     const opponent = this.board.otherPlayer(this);
 
     const isKingInCheckMate = king

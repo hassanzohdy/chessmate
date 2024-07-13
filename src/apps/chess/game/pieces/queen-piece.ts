@@ -16,8 +16,10 @@ export class Queen extends Piece {
     // 2. can move on the same column (up to 7 squares)
     // 3. can move diagonally in all 4 directions (up to 7 squares per diagonal)
 
-    return getStraightSquares(this.square, this.player).concat(
-      getDiagonalSquares(this.square, this.player),
-    );
+    return getStraightSquares(this.square, this.player)
+      .concat(getDiagonalSquares(this.square, this.player))
+      .filter(square => {
+        return this.canProtectedTheKingInSquare(square);
+      });
   }
 }

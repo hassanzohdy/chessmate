@@ -13,6 +13,8 @@ export class Rook extends Piece {
     // 1. can move on the same row (up to 7 squares)
     // 2. can move on the same column (up to 7 squares)
 
-    return getStraightSquares(this.square, this.player);
+    return getStraightSquares(this.square, this.player).filter(square => {
+      return this.canProtectedTheKingInSquare(square);
+    });
   }
 }
