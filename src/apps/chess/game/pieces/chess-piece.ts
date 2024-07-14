@@ -143,15 +143,14 @@ export abstract class Piece {
     // now if the king is checked, we need to make sure that the pawn can move to a square that can protect the king
     // otherwise, we need to make sure that the pawn can attack the piece that is attacking the king
 
-    const piece = this.player.checkedBy[0];
+    const attackingPiece = this.player.checkedBy[0];
 
-    // first case, the pawn can capture the attacking piece
-    if (piece.square === square) return true;
+    // first case, the piece can capture the attacking piece
+    if (attackingPiece.square === square) return true;
 
     // if the piece is knight and can not be captured, it can not be blocked
-    if (piece.name === PieceName.Knight) return false;
+    if (attackingPiece.name === PieceName.Knight) return false;
 
-    // now we eed to check if the pawn can block the attacking piece
     return squaresBetweenPieceAndKing.includes(square);
   }
 

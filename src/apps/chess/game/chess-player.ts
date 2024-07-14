@@ -135,7 +135,9 @@ export class Player {
 
     for (const piece of opponent.activePiecesExceptKing) {
       if (piece.canMoveTo(this.king.square, true)) {
-        this.checkedBy.push(piece);
+        if (!this.checkedBy.includes(piece)) {
+          this.checkedBy.push(piece);
+        }
       }
     }
 
