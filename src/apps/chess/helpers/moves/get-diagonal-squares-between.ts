@@ -3,7 +3,6 @@ import { chessBoardAtom } from "../../atoms";
 
 export function getDiagonalSquaresBetween(squareA: Square, squareB: Square) {
   const board = chessBoardAtom.value;
-
   const squares: Square[] = [];
 
   let row = squareA.row;
@@ -17,10 +16,11 @@ export function getDiagonalSquaresBetween(squareA: Square, squareB: Square) {
   column += columnIncrement;
 
   while (row !== squareB.row && column !== squareB.column) {
+    squares.push(board.getSquare(row, column));
+
+    // Move to the next diagonal square
     row += rowIncrement;
     column += columnIncrement;
-
-    squares.push(board.getSquare(row, column));
   }
 
   return squares;
