@@ -41,19 +41,19 @@ export function useHighlightedSquare(square: Square) {
           found = true;
           switch (highlightedSquare.type) {
             case "check":
-              setHighlightColor("red");
+              setHighlightColor("#c85757");
               break;
             case "move":
-              setHighlightColor("yellow");
+              setHighlightColor("#efe05e");
               break;
             case "selected":
               setHighlightColor("#829769");
               break;
             case "opponentSelected":
-              setHighlightColor("purple");
+              setHighlightColor("#986698");
               break;
             case "attacking":
-              setHighlightColor("red");
+              setHighlightColor("#c85757");
               break;
           }
         }
@@ -99,6 +99,10 @@ export function useOnSquareClick(square: Square) {
 
     const leftClickCallback = () => {
       rightClickHighlightedSquaresAtom.clearAll();
+
+      if (square.piece) return;
+
+      highlightedSquaresAtom.clearPieceSelection();
     };
 
     squareElement.addEventListener("click", leftClickCallback);

@@ -151,8 +151,6 @@ export abstract class Piece {
     // if the piece is knight and can not be captured, it can not be blocked
     if (piece.name === PieceName.Knight) return false;
 
-    console.log(piece, squaresBetweenPieceAndKing);
-
     // now we eed to check if the pawn can block the attacking piece
     return squaresBetweenPieceAndKing.includes(square);
   }

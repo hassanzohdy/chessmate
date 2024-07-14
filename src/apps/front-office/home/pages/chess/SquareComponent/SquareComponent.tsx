@@ -95,13 +95,18 @@ export default function SquareComponent({ color, square }: SquareProps) {
           <div
             className="absolute inset-0 flex justify-center items-center"
             style={{ zIndex: 1 }}>
-            <div className="w-10 h-10 border-4 border-orange-800 rounded-full" />
+            <div
+              className="absolute inset-0 flex justify-center items-center"
+              style={{ zIndex: 1 }}>
+              <div className="w-4 h-4 bg-[#585555] rounded-full bg-opacity-50" />
+            </div>
+            <div className="w-16 h-16 border-4 border-[#585555] rounded-full" />
           </div>
         ) : (
           <div
             className="absolute inset-0 flex justify-center items-center"
             style={{ zIndex: 1 }}>
-            <div className="w-4 h-4 bg-orange-800 rounded-full bg-opacity-50" />
+            <div className="w-4 h-4 bg-[#585555] rounded-full bg-opacity-50" />
           </div>
         ))}
     </div>

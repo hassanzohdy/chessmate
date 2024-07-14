@@ -1,6 +1,7 @@
 import { ChessBoard } from "apps/chess/game/chess-board";
 import { getDiagonalSquaresBetween } from "../helpers/moves/get-diagonal-squares-between";
 import { getStraightSquaresBetween } from "../helpers/moves/get-straight-squares-between";
+import { inSameDiagonal } from "../helpers/moves/in-same-diagonal";
 import { Square } from "./chess-square";
 import { King, Piece } from "./pieces";
 import { PieceName, PlayerColor } from "./types";
@@ -106,8 +107,7 @@ export class Player {
   ): Square[] {
     if (!this.isChecked) return [];
 
-    // if the piece is queen or bishop, check for diagonal squares
-    if ([PieceName.Queen, PieceName.Bishop].includes(attackingPiece.name)) {
+    if (inSameDiagonal(this.king.square, attackingPiece.square)) {
       return getDiagonalSquaresBetween(this.king.square, attackingPiece.square);
     }
 

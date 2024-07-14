@@ -83,7 +83,7 @@ export default function PieceComponent({ piece: incomingPiece }: PieceProps) {
       pieceElement.removeEventListener("contextmenu", rightClickCallback);
       pieceElement.removeEventListener("click", leftClickCallback);
     };
-  }, [piece]);
+  }, [board.playerAtTheBottom.pieces, piece]);
 
   useEffect(() => {
     if (incomingPiece instanceof Pawn === false) return;

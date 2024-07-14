@@ -72,6 +72,7 @@ type HighlightedSquare = {
 type HighlightedSquaresActions = {
   toggleSelectedPieceSquare: (square: Square) => void;
   toggleOpponentSelectedPieceSquare: (square: Square) => void;
+  clearPieceSelection: () => void;
 };
 
 export const highlightedSquaresAtom = atom<
@@ -88,7 +89,10 @@ export const highlightedSquaresAtom = atom<
             // unselect
             highlightedSquaresAtom.update(
               highlightedSquaresAtom.value.filter(
-                s => s !== highlightedSquare && s.type !== "selected",
+                s =>
+                  s !== highlightedSquare &&
+                  s.type !== "selected" &&
+                  s.type !== "opponentSelected",
               ),
             );
             return;
@@ -101,7 +105,9 @@ export const highlightedSquaresAtom = atom<
       }
 
       highlightedSquaresAtom.update([
-        ...highlightedSquaresAtom.value.filter(s => s.type !== "selected"),
+        ...highlightedSquaresAtom.value.filter(
+          s => s.type !== "selected" && s.type !== "opponentSelected",
+        ),
         {
           square,
           type: "selected",
@@ -115,7 +121,10 @@ export const highlightedSquaresAtom = atom<
             // unselect
             highlightedSquaresAtom.update(
               highlightedSquaresAtom.value.filter(
-                s => s !== highlightedSquare && s.type !== "opponentSelected",
+                s =>
+                  s !== highlightedSquare &&
+                  s.type !== "opponentSelected" &&
+                  s.type !== "selected",
               ),
             );
             return;
@@ -129,13 +138,21 @@ export const highlightedSquaresAtom = atom<
 
       highlightedSquaresAtom.update([
         ...highlightedSquaresAtom.value.filter(
-          s => s.type !== "opponentSelected",
+          s => s.type !== "opponentSelected" && s.type !== "selected",
         ),
         {
           square,
           type: "opponentSelected",
         },
       ]);
+    },
+    clearPieceSelection: () => {
+      // clear both selected and opponentSelected
+      highlightedSquaresAtom.update(
+        highlightedSquaresAtom.value.filter(
+          s => s.type !== "selected" && s.type !== "opponentSelected",
+        ),
+      );
     },
   },
 });
