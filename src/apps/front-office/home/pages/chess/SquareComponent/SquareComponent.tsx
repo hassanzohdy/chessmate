@@ -85,7 +85,7 @@ export default function SquareComponent({ color, square }: SquareProps) {
             style={{
               borderColor: square.piece?.player?.isOpponent
                 ? "#d127d1"
-                : "#95d61f",
+                : "#089200f",
             }}
           />
         </div>
