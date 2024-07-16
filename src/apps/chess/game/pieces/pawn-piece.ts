@@ -142,15 +142,13 @@ export class Pawn extends Piece {
       // Move two squares forward
       if (nextSquare && !nextSquare.piece) {
         availableSquares.push(nextSquare);
-      }
-
-      const moveTwoSquaresForward = this.board.getSquare(
-        this.square.row + 2,
-        this.square.column,
-      );
-
-      if (moveTwoSquaresForward && !moveTwoSquaresForward.piece) {
-        availableSquares.push(moveTwoSquaresForward);
+        const moveTwoSquaresForward = this.board.getSquare(
+          this.square.row + 2,
+          this.square.column,
+        );
+        if (moveTwoSquaresForward && !moveTwoSquaresForward.piece) {
+          availableSquares.push(moveTwoSquaresForward);
+        }
       }
     }
 
