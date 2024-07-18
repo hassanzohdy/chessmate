@@ -166,6 +166,7 @@ export abstract class Piece {
       // for example if a white bishop (for black) stands on D7 and the black king is on E8
       // If there is a white queen stands on A4, the bishop can not move to protect the king as long as
       // there is no piece between the bishop and the queen in B5 and C6 squares
+      return true;
 
       if (!this.withKingProtectionCheck) return true;
 
