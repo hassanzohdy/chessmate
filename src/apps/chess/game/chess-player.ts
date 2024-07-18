@@ -134,6 +134,8 @@ export class Player {
     this.checkedBy = [];
 
     for (const piece of opponent.activePiecesExceptKing) {
+      if (!piece.isMoved) continue;
+
       if (piece.canMoveTo(this.king.square, true)) {
         if (!this.checkedBy.includes(piece)) {
           this.checkedBy.push(piece);

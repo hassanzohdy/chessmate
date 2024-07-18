@@ -1,12 +1,13 @@
+import {
+  highlightedSquaresAtom,
+  rightClickHighlightedSquaresAtom,
+} from "@chess/atoms";
 import { Pawn, Piece } from "@chess/game";
 import { pieceImages } from "@chess/helpers/pieces-images";
 import { useBoard } from "@chess/hooks";
 import { useEvent } from "@mongez/react-hooks";
-import { useEffect, useState } from "react";
-import {
-  highlightedSquaresAtom,
-  rightClickHighlightedSquaresAtom,
-} from "../../../../../chess/atoms";
+import { only } from "@mongez/reinforcements";
+import { CSSProperties, useEffect, useState } from "react";
 
 export type PieceType = keyof typeof pieceImages.black;
 
@@ -95,6 +96,146 @@ export default function PieceComponent({ piece: incomingPiece }: PieceProps) {
     });
   }, [incomingPiece, whiteStartsAtBottom]);
 
+  useEffect(() => {
+    const pieceElement = document.getElementById(piece.id);
+
+    if (!pieceElement) return;
+
+    // implement piece drag and drop to move from current square to another on drop
+    // when piece is dragged we want to display the piece image beside the cursor
+    // if the piece is hovering over a highlighted (available squares for piece to move to) square, trigger mouseover event on that square
+    // once leaving it, trigger mouseout event on that square
+    // on drop, move the piece to the new square and remove the piece from the old square (to mark the piece is moved to that square), just call square.element.click()
+    // on drag end, remove the piece image from the cursor
+    // now let's start to work
+
+    let draggedPieceImage: HTMLImageElement;
+
+    let letBeforeDraggingStyle: CSSProperties = {};
+
+    const setElementPosition = e => {
+      if (!draggedPieceImage) return;
+
+      // now we want to set the position of the image to be below the cursor not beside it
+      draggedPieceImage.style.left = `${e.pageX - 35}px`;
+      draggedPieceImage.style.top = `${e.pageY - 35}px`;
+    };
+
+    const handleDragStart = e => {
+      e.preventDefault(); // Prevent default behavior to enable custom drag
+
+      if (piece.player !== board.currentPlayer) return;
+
+      // take style backup before moving
+      letBeforeDraggingStyle = only(pieceElement.style, [
+        "width",
+        "height",
+        "left",
+        "top",
+        "transition",
+        "opacity",
+        "position",
+      ]);
+
+      letBeforeDraggingStyle.width =
+        pieceElement.getBoundingClientRect().width + "px";
+      letBeforeDraggingStyle.height =
+        pieceElement.getBoundingClientRect().height + "px";
+
+      draggedPieceImage = pieceElement.cloneNode(true) as HTMLImageElement;
+      draggedPieceImage.style.position = "absolute";
+      draggedPieceImage.style.pointerEvents = "none";
+
+      draggedPieceImage.style.zIndex = "100";
+      draggedPieceImage.style.width = letBeforeDraggingStyle.width;
+      draggedPieceImage.style.height = letBeforeDraggingStyle.height;
+      // now we want to set the position of the image to be below the cursor not beside it
+      setElementPosition(e);
+      // no transition on drag
+      draggedPieceImage.style.transition = "none";
+      // give it some opacity
+      draggedPieceImage.style.opacity = "0.6";
+
+      // make sure to hide the original piece and remove the transition from it as well
+      pieceElement.style.opacity = "0";
+      pieceElement.style.transition = "none";
+
+      document.body.appendChild(draggedPieceImage);
+
+      document.addEventListener("mousemove", setElementPosition);
+      document.addEventListener("mouseup", handleDrop);
+
+      piece.square.element.dataset.cbg = // cbg = current background color
+        piece.square.element.style.backgroundColor;
+      piece.square.element.style.backgroundColor = "#c0c07b";
+    };
+
+    const handleDrop = () => {
+      document.removeEventListener("mousemove", setElementPosition);
+      document.removeEventListener("mouseup", handleDrop);
+
+      if (!draggedPieceImage) return;
+
+      draggedPieceImage.remove();
+
+      for (const key in letBeforeDraggingStyle) {
+        draggedPieceImage.style[key] = letBeforeDraggingStyle[key];
+
+        delete letBeforeDraggingStyle[key];
+      }
+
+      pieceElement.style.pointerEvents = "auto";
+      pieceElement.style.zIndex = "auto";
+      pieceElement.style.opacity = "1";
+
+      if (piece.square.element.dataset.cbg) {
+        piece.square.element.style.backgroundColor =
+          piece.square.element.dataset.cbg;
+        delete piece.square.element.dataset.cbg;
+
+        const square = board.highlightedSquares.find(square => {
+          return square.element.getAttribute("data-bg") !== null;
+        });
+
+        if (square) {
+          board.clearHighlightedSquares();
+          piece.moveToSquare(square);
+          square.removeHighlightAsSuggestedMove();
+        }
+      }
+    };
+
+    pieceElement.addEventListener("mousedown", handleDragStart);
+
+    return () => {
+      pieceElement.removeEventListener("mousedown", handleDragStart);
+      document.removeEventListener("mousemove", setElementPosition);
+      document.removeEventListener("mouseup", handleDrop);
+    };
+  }, [piece, board, piece.id]);
+
+  useEffect(() => {
+    const pieceElement = document.getElementById(piece.id);
+
+    if (!pieceElement) return;
+
+    const mouseoverCallback = () => {
+      piece.square.highlightAsSuggestedMove();
+    };
+
+    const mouseoutCallback = () => {
+      piece.square.removeHighlightAsSuggestedMove();
+    };
+
+    pieceElement.addEventListener("mouseover", mouseoverCallback);
+    pieceElement.addEventListener("mouseout", mouseoutCallback);
+
+    return () => {
+      pieceElement.removeEventListener("mouseover", mouseoverCallback);
+      pieceElement.removeEventListener("mouseout", mouseoutCallback);
+    };
+  }, [piece]);
+
   useEvent(
     () =>
       piece.onTaken(() => {
@@ -125,7 +266,7 @@ export default function PieceComponent({ piece: incomingPiece }: PieceProps) {
 
   return (
     <img
-      onClick={detectAvailableMoves}
+      onMouseDown={detectAvailableMoves}
       src={pieceImage}
       alt={piece.name}
       id={piece.id}

@@ -4,7 +4,7 @@ import {
   useCircleHighlightSquare,
   useHighlightedSquare,
   useIsPointingToSquare,
-  useOnSquareClick,
+  useSquareElementEvents,
   useSquarePiece,
 } from "@chess/hooks";
 
@@ -23,7 +23,7 @@ export default function SquareComponent({ color, square }: SquareProps) {
   const board = useBoard();
   const isPointingToSquare = useIsPointingToSquare(square);
   const piece = useSquarePiece(square);
-  useOnSquareClick(square);
+  useSquareElementEvents(square);
   const isHighlightedFromRightClick = useCircleHighlightSquare(square);
   const highlightedColor = useHighlightedSquare(square);
 
@@ -77,35 +77,27 @@ export default function SquareComponent({ color, square }: SquareProps) {
       )}
       {isHighlightedFromRightClick && (
         // display a green circle when right click on a square like the one on li chess
-        <div
-          className="absolute inset-0 flex justify-center items-center"
-          style={{ zIndex: 1 }}>
+        <div className="absolute inset-0 flex justify-center items-center">
           <div
             className="w-full h-full border-4 rounded-full"
             style={{
               borderColor: square.piece?.player?.isOpponent
                 ? "#d127d1"
-                : "#089200f",
+                : "#1e9b3d",
             }}
           />
         </div>
       )}
       {isPointingToSquare &&
         (square.piece ? (
-          <div
-            className="absolute inset-0 flex justify-center items-center"
-            style={{ zIndex: 1 }}>
-            <div
-              className="absolute inset-0 flex justify-center items-center"
-              style={{ zIndex: 1 }}>
+          <div className="absolute inset-0 flex justify-center items-center">
+            <div className="absolute inset-0 flex justify-center items-center">
               <div className="w-4 h-4 bg-[#585555] rounded-full bg-opacity-50" />
             </div>
             <div className="w-16 h-16 border-4 border-[#585555] rounded-full" />
           </div>
         ) : (
-          <div
-            className="absolute inset-0 flex justify-center items-center"
-            style={{ zIndex: 1 }}>
+          <div className="absolute inset-0 flex justify-center items-center">
             <div className="w-4 h-4 bg-[#585555] rounded-full bg-opacity-50" />
           </div>
         ))}

@@ -2,6 +2,7 @@ import events from "@mongez/events";
 import { Player } from "apps/chess/game/chess-player";
 import { playSound } from "../../../../shared/play-sound";
 import { chessBoardAtom } from "../../atoms";
+import { checkIfPieceIsMovedToSquareWillPutKingInCheck } from "../../helpers/check-if-piece-is-moved-will-put-king-in-check";
 import { Square } from "./../chess-square";
 import { PieceName } from "./../types";
 
@@ -37,6 +38,11 @@ export abstract class Piece {
   public isSelected = false;
 
   /**
+   * whether to check for king protection
+   */
+  public withKingProtectionCheck = true;
+
+  /**
    * Constructor
    */
   public constructor(public player: Player, public square: Square) {
@@ -50,6 +56,25 @@ export abstract class Piece {
     }
 
     this.moveTo(square);
+  }
+
+  /**
+   * Temporary disable king protection check
+   * Usually used to get piece available moves for certain cases
+   */
+  public noKingProtectionCheck(): this {
+    this.withKingProtectionCheck = false;
+
+    return this;
+  }
+
+  /**
+   * Reset the king protection check
+   */
+  public resetKingProtectionCheck(): this {
+    this.withKingProtectionCheck = true;
+
+    return this;
   }
 
   /**
@@ -134,7 +159,18 @@ export abstract class Piece {
           );
 
     // now we need to check if current player's king is checked
-    if (this.player.isChecked === false) return true;
+
+    if (!this.player.isChecked) {
+      // if the king is not checked, we need to check if the piece is currently guarding the king
+      // if so, then we need to find the squares between the piece and potential attacking piece for the king
+      // for example if a white bishop (for black) stands on D7 and the black king is on E8
+      // If there is a white queen stands on A4, the bishop can not move to protect the king as long as
+      // there is no piece between the bishop and the queen in B5 and C6 squares
+
+      if (!this.withKingProtectionCheck) return true;
+
+      return checkIfPieceIsMovedToSquareWillPutKingInCheck(this, square);
+    }
 
     // before we check that, if the king is checked by more than oe piece,
     // the king must move thus the pawn can not move

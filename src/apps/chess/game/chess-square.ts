@@ -1,4 +1,5 @@
 import events, { EventSubscription } from "@mongez/events";
+import { chessBoardAtom } from "../atoms";
 import { Piece } from "./pieces";
 import { SquareColor, SquareColumnPosition } from "./types";
 
@@ -94,6 +95,42 @@ export class Square {
   }
 
   /**
+   * Highlight the square as a suggested move
+   */
+  public highlightAsSuggestedMove() {
+    // if the game is not started, we don't need to highlight the squares
+    if (!this.board.highlightedSquares.includes(this)) {
+      return;
+    }
+
+    const squareElement = this.element;
+
+    squareElement.setAttribute("data-bg", squareElement.style.backgroundColor);
+
+    const squareBG = {
+      [SquareColor.White]: "#c0c07b",
+      [SquareColor.Black]: "#9f9f6b",
+    };
+
+    squareElement.style.backgroundColor = squareBG[this.color];
+  }
+
+  /**
+   * remove highlight the square as a suggested move
+   */
+  public removeHighlightAsSuggestedMove() {
+    const squareElement = this.element;
+
+    if (squareElement.getAttribute("data-bg")) {
+      squareElement.style.backgroundColor = squareElement.getAttribute(
+        "data-bg",
+      ) as string;
+
+      squareElement.removeAttribute("data-bg");
+    }
+  }
+
+  /**
    * Listen to piece change
    */
   public onPieceChange(callback: (piece?: Piece) => void): EventSubscription {
@@ -101,5 +138,9 @@ export class Square {
       `chess.square.${this.row}.${this.column}.piece`,
       callback,
     );
+  }
+
+  protected get board() {
+    return chessBoardAtom.value;
   }
 }

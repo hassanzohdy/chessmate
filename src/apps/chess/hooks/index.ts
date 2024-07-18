@@ -39,6 +39,7 @@ export function useHighlightedSquare(square: Square) {
       for (const highlightedSquare of squares) {
         if (highlightedSquare.square === square) {
           found = true;
+
           switch (highlightedSquare.type) {
             case "check":
               setHighlightColor("#c85757");
@@ -80,10 +81,8 @@ export function useCircleHighlightSquare(square: Square) {
   return isRightClicked;
 }
 
-/**
- * 3. Circle Green: When player right click on a square, the square should be highlighted with green color, this could be in another hoo
- */
-export function useOnSquareClick(square: Square) {
+export function useSquareElementEvents(square: Square) {
+  const board = useBoard();
   useEffect(() => {
     const squareElement = document.getElementById(square.id) as HTMLDivElement;
 
@@ -107,11 +106,24 @@ export function useOnSquareClick(square: Square) {
 
     squareElement.addEventListener("click", leftClickCallback);
 
+    const mouseoverCallback = () => {
+      square.highlightAsSuggestedMove();
+    };
+
+    const mouseoutCallback = () => {
+      square.removeHighlightAsSuggestedMove();
+    };
+
+    squareElement.addEventListener("mouseover", mouseoverCallback);
+    squareElement.addEventListener("mouseout", mouseoutCallback);
+
     return () => {
       squareElement.removeEventListener("contextmenu", rightClickCallback);
       squareElement.removeEventListener("click", leftClickCallback);
+      squareElement.removeEventListener("mouseover", mouseoverCallback);
+      squareElement.removeEventListener("mouseout", mouseoutCallback);
     };
-  }, [square]);
+  }, [square, board]);
 }
 
 export function useIsPointingToSquare(square: Square) {
